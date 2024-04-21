@@ -1,6 +1,6 @@
 Note: Még változhat a design, funkciólista bővülhet, végpontlista nevek változhatnak bővülhetnek
 1. Rendszerleírás: 
-	- Mindig is szerettem a FromSoftware játékait a kihívás miatt, Éppen ezért ezek a játékok azért híresek, mert igazán nehéz a játékaikat végigjátszani. Ez annak köszönhető, hogy a bennük lévő változatos bossok egy elég nehéz kihívás elé állítanak. Az alkalmazás célja az lenne, hogy a felhasználó játékokra lebontva tudja hatákonyan vezetni, hogy melyik boss-t győzte már le. Az alkalmazásban külön meg lehet nézni az összes boss adatai-t, rá lehet keresni bossokra. Külön profilokkal kell bejelentkezni, ahol profilonként lehet vezetni az előrehaladást. (Disscussion thread lehetőség, ha időm engedi)
+	- Mindig is szerettem a FromSoftware játékait a kihívás miatt, éppen ezért ezek a játékok azért híresek, mert igazán nehéz a játékaikat végigjátszani. Ez annak köszönhető, hogy a bennük lévő változatos bossok egy elég nehéz kihívás elé állítanak. Az alkalmazás célja az lenne, hogy a felhasználó játékokra lebontva tudja hatékonyan vezetni, hogy melyik boss-t győzte már le. Az alkalmazásban külön meg lehet nézni az összes boss adatait, rá lehet keresni bossokra. Külön profilokkal kell bejelentkezni, ahol profilonként lehet vezetni az előrehaladást. (Disscussion thread lehetőség, ha időm engedi)
 2. Funkciólista: 
 	- Bossok nyilvántartása, megjelenítése listaként
 	- Bossok hozzáadása a saját listához, akiket már a user legyőzött
