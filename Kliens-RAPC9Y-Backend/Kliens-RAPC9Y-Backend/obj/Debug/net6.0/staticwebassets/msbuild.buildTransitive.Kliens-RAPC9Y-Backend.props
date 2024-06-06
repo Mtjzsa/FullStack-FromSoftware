@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Kliens-RAPC9Y-Backend.props" />
+</Project>

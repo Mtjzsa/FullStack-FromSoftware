@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kliensf\u00E9l\u00E9ves\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\data\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\data\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kliensf\u00E9l\u00E9ves\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kliensf\u00E9l\u00E9ves\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kliensf\u00E9l\u00E9ves\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\models\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\models\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kliensf\u00E9l\u00E9ves\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\controllers\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\controllers\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApiDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Data\\ApiDbContext.cs",
+              "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Data\\ApiDbContext.cs",
+              "ToolTip": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Data\\ApiDbContext.cs",
+              "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Data\\ApiDbContext.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAADwvx4AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T16:09:40.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\Game.cs",
+              "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Models\\Game.cs",
+              "ToolTip": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\Game.cs",
+              "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Models\\Game.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:54:35.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Boss.cs",
+              "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\Boss.cs",
+              "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Models\\Boss.cs",
+              "ToolTip": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\Boss.cs",
+              "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Models\\Boss.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:54:35.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Controllers\\GameController.cs",
+              "ToolTip": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Controllers\\GameController.cs",
+              "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Controllers\\GameController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwAcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:53:42.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BossController.cs",
+              "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
+              "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
+              "ToolTip": "C:\\Users\\matej\\VSCode\\KliensF\u00E9l\u00E9ves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
+              "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowDoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T13:48:51.35Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
