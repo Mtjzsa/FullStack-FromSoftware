@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kliens-RAPC9Y-Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+243a5fd1def8a18f8b7a78cd64168091feb0b4fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kliens-RAPC9Y-Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kliens-RAPC9Y-Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

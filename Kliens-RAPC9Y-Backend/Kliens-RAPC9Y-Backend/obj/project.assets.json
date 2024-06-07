@@ -7773,11 +7773,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matej\\VSCode\\KliensFéléves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj",
+      "projectUniqueName": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj",
       "projectName": "Kliens-RAPC9Y-Backend",
-      "projectPath": "C:\\Users\\matej\\VSCode\\KliensFéléves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj",
+      "projectPath": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj",
       "packagesPath": "C:\\Users\\matej\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matej\\VSCode\\KliensFéléves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\obj\\",
+      "outputPath": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\matej\\AppData\\Roaming\\NuGet\\NuGet.Config",

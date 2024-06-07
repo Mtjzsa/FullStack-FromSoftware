@@ -19,6 +19,7 @@ namespace Kliens_RAPC9Y_Backend.Models
         [Required]
         public string GameCover { get; set; }
 
+        [JsonIgnore]
         [NotMapped]
         public virtual ICollection<Boss> Bosses { get; set; }
 

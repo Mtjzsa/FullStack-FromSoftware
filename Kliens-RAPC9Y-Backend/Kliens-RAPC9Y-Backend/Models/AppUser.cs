@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Kliens_RAPC9Y_Backend.Models
 {
@@ -13,5 +15,9 @@ namespace Kliens_RAPC9Y_Backend.Models
         [StringLength(200)]
         [Required]
         public string LastName { get; set; }
+
+        [StringLength(2000)]
+        public string DefeatedBosses { get; set; }
+
     }
 }

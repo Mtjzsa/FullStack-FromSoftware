@@ -18,6 +18,12 @@ namespace Kliens_RAPC9Y_Backend.Data
         public DbSet<Boss> Bosses { get; set; }
         public DbSet<Game> Games { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseLazyLoadingProxies();
+        }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<IdentityRole>().HasData
@@ -50,31 +56,31 @@ namespace Kliens_RAPC9Y_Backend.Data
             builder.Entity<Boss>().HasData(new Boss[]
             {
                 //Elden ring bosses
-                new Boss { Game_Id = 1, BossName = "Margit the Fell Omen", Location = "Stormveil Castle", Hp = 4074, Souls = 12000, Defense =103, Defeated = true, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/margit-1-boss-elden-ring-wiki.jpg" },
-                new Boss { Game_Id = 1, BossName = "Godrick the Grafted", Location = "Stormveil Castle", Hp = 6080, Souls = 20000, Defense = 105, Defeated = true, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/godrick_the_grafted_bosses_elden_ring_wiki_600px1-min.jpg" },
-                new Boss { Game_Id = 1, BossName = "Red Wolf of Radagon", Location = "Raya Lucaria Academy", Hp = 2204, Souls = 14000, Defense = 107, Defeated = false, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/red-wolf-of-radagon-2-elden-ring-wiki-guide.jpg" },
-                new Boss { Game_Id = 1, BossName = "Rennala, Queen of the Full Moon", Location = "Raya Lucaria Academy", Hp = 40000, Souls = 700, Defense = 109, Defeated = false, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/rennala_queen_of_the_full_moon_bosses_elden_ring_wiki_600px1-min.jpg" },
-                new Boss { Game_Id = 1, BossName = "Leonine Misbegotten", Location = "Castle Morne", Hp = 2198, Souls = 3800, Defense = 104, Defeated = true, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/leonine_misbegotten_bosses_elden_ring_wiki_600px1.jpg" },
+                new Boss { Game_Id = 1, BossName = "Margit the Fell Omen", Location = "Stormveil Castle", Hp = 4074, Souls = 12000, Defense =103, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/margit-1-boss-elden-ring-wiki.jpg" },
+                new Boss { Game_Id = 1, BossName = "Godrick the Grafted", Location = "Stormveil Castle", Hp = 6080, Souls = 20000, Defense = 105, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/godrick_the_grafted_bosses_elden_ring_wiki_600px1-min.jpg" },
+                new Boss { Game_Id = 1, BossName = "Red Wolf of Radagon", Location = "Raya Lucaria Academy", Hp = 2204, Souls = 14000, Defense = 107, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/red-wolf-of-radagon-2-elden-ring-wiki-guide.jpg" },
+                new Boss { Game_Id = 1, BossName = "Rennala, Queen of the Full Moon", Location = "Raya Lucaria Academy", Hp = 40000, Souls = 700, Defense = 109, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/rennala_queen_of_the_full_moon_bosses_elden_ring_wiki_600px1-min.jpg" },
+                new Boss { Game_Id = 1, BossName = "Leonine Misbegotten", Location = "Castle Morne", Hp = 2198, Souls = 3800, Defense = 104, Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/leonine_misbegotten_bosses_elden_ring_wiki_600px1.jpg" },
 
                 // Bloodborne Bosses
-                new Boss { Game_Id = 2, BossName = "Father Gascoigne", Location = "Central Yharnam", Hp = 2031, Souls = 1800, Defense = 95, Defeated = false, Image = "https://bloodborne.wiki.fextralife.com/file/Bloodborne/father_gascoigne_boss.jpg" },
-                new Boss { Game_Id = 2, BossName = "Gehrman, The First Hunter", Location = "Hunter's Dream", Hp = 14293, Souls = 128000, Defense = 150, Defeated = false, Image = "https://bloodborne.wiki.fextralife.com/file/Bloodborne/gehrman_boss.jpg" },
+                new Boss { Game_Id = 2, BossName = "Father Gascoigne", Location = "Central Yharnam", Hp = 2031, Souls = 1800, Defense = 95, Image = "https://bloodborne.wiki.fextralife.com/file/Bloodborne/father_gascoigne_boss.jpg" },
+                new Boss { Game_Id = 2, BossName = "Gehrman, The First Hunter", Location = "Hunter's Dream", Hp = 14293, Souls = 128000, Defense = 150, Image = "https://bloodborne.wiki.fextralife.com/file/Bloodborne/gehrman_boss.jpg" },
                 
                 // Dark Souls Bosses
-                new Boss{ Game_Id = 3, BossName = "Gwyn, Lord of Cinder", Location = "Kiln of the First Flame", Hp = 4250, Souls = 70000, Defense = 120, Defeated = false, Image = "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0024_Gwyn%20Lord%20of%20Cinder.jpg" },
-                new Boss{ Game_Id = 3, BossName = "Ornstein", Location = "Anor Londo", Hp = 1642, Souls = 50000, Defense = 100, Defeated = false, Image = "https://darksouls.wiki.fextralife.com/file/Dark-Souls/tumblr_lxlmomDlzY1qgjlhf.jpg" },
+                new Boss{ Game_Id = 3, BossName = "Gwyn, Lord of Cinder", Location = "Kiln of the First Flame", Hp = 4250, Souls = 70000, Defense = 120, Image = "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0024_Gwyn%20Lord%20of%20Cinder.jpg" },
+                new Boss{ Game_Id = 3, BossName = "Ornstein", Location = "Anor Londo", Hp = 1642, Souls = 50000, Defense = 100, Image = "https://darksouls.wiki.fextralife.com/file/Dark-Souls/tumblr_lxlmomDlzY1qgjlhf.jpg" },
 
                 // Dark Souls II Bosses
-                new Boss { Game_Id = 4, BossName = "Nashandra", Location = "Throne of Want", Hp = 8770, Souls = 90000, Defense = 135, Defeated = false, Image = "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/nashandra.png" },
-                new Boss { Game_Id = 4, BossName = "The Pursuer", Location = "Forest of Fallen Giants", Hp = 3500, Souls = 17000, Defense = 123, Defeated = false, Image = "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/pursuer.png" },
+                new Boss { Game_Id = 4, BossName = "Nashandra", Location = "Throne of Want", Hp = 8770, Souls = 90000, Defense = 135, Image = "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/nashandra.png" },
+                new Boss { Game_Id = 4, BossName = "The Pursuer", Location = "Forest of Fallen Giants", Hp = 3500, Souls = 17000, Defense = 123, Image = "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/pursuer.png" },
                 
                 // Dark Souls III Bosses
-                new Boss { Game_Id = 5, BossName = "Soul of Cinder", Location = "Kiln of the First Flame", Hp = 10766, Souls = 100000, Defense = 150, Defeated = false, Image = "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/tumblr_o25lubbSXv1qzwtdlo1_1280.jpg" },
-                new Boss { Game_Id = 5, BossName = "Pontiff Sulyvahn", Location = "Irithyll of the Boreal Valley", Hp = 5106, Souls = 28000, Defense = 107, Defeated = false, Image = "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/pontiff_sulyvahn_trophy.PNG" },
+                new Boss { Game_Id = 5, BossName = "Soul of Cinder", Location = "Kiln of the First Flame", Hp = 10766, Souls = 100000, Defense = 150, Image = "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/tumblr_o25lubbSXv1qzwtdlo1_1280.jpg" },
+                new Boss { Game_Id = 5, BossName = "Pontiff Sulyvahn", Location = "Irithyll of the Boreal Valley", Hp = 5106, Souls = 28000, Defense = 107, Image = "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/pontiff_sulyvahn_trophy.PNG" },
                 
                 // Sekiro: Shadows Die Twice Bosses
-                new Boss { Game_Id = 6, BossName = "Isshin, the Sword Saint", Location = "Ashina Castle", Hp = 10000, Souls = 2000, Defense = 700, Defeated = false, Image = "https://sekiroshadowsdietwice.wiki.fextralife.com/file/Sekiro-Shadows-Die-Twice/isshin-sword-saint-boss-sekiro-wiki-guide-300px.png" },
-                new Boss { Game_Id = 6, BossName = "Genichiro Ashina", Location = "Ashina Castle", Hp = 10000, Souls = 20000, Defense = 600, Defeated = false, Image = "https://sekiroshadowsdietwice.wiki.fextralife.com/file/Sekiro-Shadows-Die-Twice/genichiro-ashina-boss-sekiro-wiki-guide-300px.png" }
+                new Boss { Game_Id = 6, BossName = "Isshin, the Sword Saint", Location = "Ashina Castle", Hp = 10000, Souls = 2000, Defense = 700, Image = "https://sekiroshadowsdietwice.wiki.fextralife.com/file/Sekiro-Shadows-Die-Twice/isshin-sword-saint-boss-sekiro-wiki-guide-300px.png" },
+                new Boss { Game_Id = 6, BossName = "Genichiro Ashina", Location = "Ashina Castle", Hp = 10000, Souls = 20000, Defense = 600, Image = "https://sekiroshadowsdietwice.wiki.fextralife.com/file/Sekiro-Shadows-Die-Twice/genichiro-ashina-boss-sekiro-wiki-guide-300px.png" }
             });
 
 

@@ -4,6 +4,7 @@ using Kliens_RAPC9Y_Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kliens_RAPC9Y_Backend.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    partial class ApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240607094207_defeatedPropDeleted")]
+    partial class defeatedPropDeleted
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,11 +35,6 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DefeatedBosses")
-                        .IsRequired()
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -140,7 +137,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1d98abe8-067d-40d5-9c6b-3975c3395df2",
+                            Id = "5dc555ac-87d5-41ab-8ea3-5dae413c619a",
                             BossName = "Margit the Fell Omen",
                             Defense = 103,
                             Game_Id = 1,
@@ -151,7 +148,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "dbe98d21-8266-4a1d-b8c3-d79a0bdc3f12",
+                            Id = "32fa989b-53eb-44b9-9b66-74fa8ae690a8",
                             BossName = "Godrick the Grafted",
                             Defense = 105,
                             Game_Id = 1,
@@ -162,7 +159,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "d0bf53bf-eea8-4981-96fe-19e0f6993485",
+                            Id = "2f20d779-407c-4df9-9804-bf10692ebb1f",
                             BossName = "Red Wolf of Radagon",
                             Defense = 107,
                             Game_Id = 1,
@@ -173,7 +170,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "18ad68da-9304-4feb-ac11-6047d65c4e0d",
+                            Id = "6ec4f2f7-40f4-4f4e-82a8-d927937b3abe",
                             BossName = "Rennala, Queen of the Full Moon",
                             Defense = 109,
                             Game_Id = 1,
@@ -184,7 +181,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "b61c1f05-d89c-43d4-ae69-6e5d0fa00f0c",
+                            Id = "5bc792ff-bc91-4da2-9c83-a84da0e1a9aa",
                             BossName = "Leonine Misbegotten",
                             Defense = 104,
                             Game_Id = 1,
@@ -195,7 +192,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "04f1d6de-e104-4c37-8e41-eecaff30bf42",
+                            Id = "0b13e338-2147-4194-954b-9c341d6741b8",
                             BossName = "Father Gascoigne",
                             Defense = 95,
                             Game_Id = 2,
@@ -206,7 +203,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "ef62f043-14c6-4140-bc24-89161461a63c",
+                            Id = "0e67e935-667c-45ff-97ab-86abd1e67773",
                             BossName = "Gehrman, The First Hunter",
                             Defense = 150,
                             Game_Id = 2,
@@ -217,7 +214,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "21fa331b-5954-41fb-b562-27730cb1274b",
+                            Id = "289e8dee-e3c0-435f-bbd2-81d00141e201",
                             BossName = "Gwyn, Lord of Cinder",
                             Defense = 120,
                             Game_Id = 3,
@@ -228,7 +225,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "8ec60d2a-946d-4d22-971e-a9fc423e7342",
+                            Id = "18375eb6-f278-41b7-b5e7-a14313849f3f",
                             BossName = "Ornstein",
                             Defense = 100,
                             Game_Id = 3,
@@ -239,7 +236,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "92347543-2a10-40a1-8b0f-850d39fd20c0",
+                            Id = "52c03d83-8f83-41d4-8f4e-3902035b2e61",
                             BossName = "Nashandra",
                             Defense = 135,
                             Game_Id = 4,
@@ -250,7 +247,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "82f0b6a9-e802-407e-8c04-5e1933d8cfea",
+                            Id = "e0122de2-0946-4977-bc14-1eb32e2f12f9",
                             BossName = "The Pursuer",
                             Defense = 123,
                             Game_Id = 4,
@@ -261,7 +258,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "b7ba2f00-749b-4189-8209-f9b21b3993ff",
+                            Id = "03164434-28db-48da-a8fd-7b565b76931b",
                             BossName = "Soul of Cinder",
                             Defense = 150,
                             Game_Id = 5,
@@ -272,7 +269,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "58bdbf8d-934b-4a73-b3ab-cb7f46ef4c34",
+                            Id = "e7a74579-e7aa-4e0c-a6a4-a848d604312e",
                             BossName = "Pontiff Sulyvahn",
                             Defense = 107,
                             Game_Id = 5,
@@ -283,7 +280,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "c7145a87-1260-4ef1-a9a1-7e31a93aca74",
+                            Id = "6a5feb1e-0893-456f-9d01-584bbf74286d",
                             BossName = "Isshin, the Sword Saint",
                             Defense = 700,
                             Game_Id = 6,
@@ -294,7 +291,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "ec1de4a3-39e8-4bd7-8f51-cbc167945cb7",
+                            Id = "a6187575-bca7-403d-98fc-637ee8f6a32f",
                             BossName = "Genichiro Ashina",
                             Defense = 600,
                             Game_Id = 6,

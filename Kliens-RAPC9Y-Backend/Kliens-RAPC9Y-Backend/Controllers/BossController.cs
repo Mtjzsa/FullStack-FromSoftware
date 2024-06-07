@@ -2,6 +2,7 @@
 using Kliens_RAPC9Y_Backend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kliens_RAPC9Y_Backend.Controllers
@@ -11,11 +12,13 @@ namespace Kliens_RAPC9Y_Backend.Controllers
     [ApiController]
     public class BossController : ControllerBase
     {
-        ApiDbContext ctx;
+        private ApiDbContext ctx;
+        private readonly UserManager<AppUser> _userManager;
 
-        public BossController(ApiDbContext ctx)
+        public BossController(ApiDbContext ctx, UserManager<AppUser> userManager)
         {
             this.ctx = ctx;
+            _userManager = userManager;
         }
 
         [HttpGet]
@@ -26,9 +29,15 @@ namespace Kliens_RAPC9Y_Backend.Controllers
 
 
         [HttpGet("{name}")]
-        public Boss? GetBoss(string name)
+        public IActionResult GetBoss(string name)
         {
-            return ctx.Bosses.FirstOrDefault(t => t.BossName == name);
+            var boss = ctx.Bosses.FirstOrDefault(t => t.BossName == name);
+            if (boss == null)
+            {
+                return NotFound(); // Return 404 if boss not found
+            }
+
+            return Ok(boss); // Return 200 with the boss entity
         }
 
         [HttpPost]
@@ -42,12 +51,12 @@ namespace Kliens_RAPC9Y_Backend.Controllers
         public void EditBoss([FromBody] Boss b)
         {
             var old = ctx.Bosses.FirstOrDefault(t=>t.BossName == b.BossName);
+            old.Game_Id = b.Game_Id;
             old.BossName = b.BossName;
             old.Hp = b.Hp;
             old.Souls = b.Souls;
             old.Location = b.Location;
             old.Defense = b.Defense;
-            old.Defeated = b.Defeated;
             old.Image = b.Image;
             ctx.SaveChanges();
         }
@@ -58,6 +67,24 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             var old = ctx.Bosses.FirstOrDefault(t => t.BossName == name);
             ctx.Bosses.Remove(old);
             ctx.SaveChanges();
+        }
+
+        //[Authorize]
+        [HttpPost("{userName}/defeat/{bossName}")]
+        public IActionResult DefeatBoss(string userName, string bossName)
+        {
+            var user = _userManager.Users.FirstOrDefault(t => t.UserName == userName);
+            var boss = ctx.Bosses.FirstOrDefault(b => b.BossName == bossName);
+
+            if (user == null || boss == null)
+            {
+                return NotFound();
+            }
+
+            user.DefeatedBosses += boss.BossName + ";";
+            ctx.SaveChanges();
+
+            return Ok();
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lcnPjN9e8fxQz839MAn0MFRLP0EemEbqLz+k+mlD7fJM9vv/3A/TZ+c9NnxWENxHsM9Fs4CMnD96SSut18UneA==",
+  "dgSpecHash": "YkW7I4jjeMvC67ellHRaP2DxwKt5EcxNvTAQ2OL2qzmluDm5bJVqlOg522g6fWVK1Q7pkMtPqMwkQt5Vfgdldg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\matej\\VSCode\\KliensFéléves\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj",
+  "projectFilePath": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matej\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\matej\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

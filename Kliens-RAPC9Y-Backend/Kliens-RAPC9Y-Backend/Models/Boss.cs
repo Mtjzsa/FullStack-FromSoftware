@@ -35,9 +35,6 @@ namespace Kliens_RAPC9Y_Backend.Models
         public int Defense { get; set; }
 
         [Required]
-        public bool Defeated { get; set; }
-
-        [Required]
         public string Image { get; set; }
 
         public Boss()

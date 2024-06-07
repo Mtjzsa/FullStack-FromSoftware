@@ -4,6 +4,7 @@ using Kliens_RAPC9Y_Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kliens_RAPC9Y_Backend.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    partial class ApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240607093214_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,11 +35,6 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DefeatedBosses")
-                        .IsRequired()
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -111,6 +108,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Defeated")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Defense")
                         .HasColumnType("int");
 
@@ -140,8 +140,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1d98abe8-067d-40d5-9c6b-3975c3395df2",
+                            Id = "13164059-3f20-413d-a9f9-4d65394d631a",
                             BossName = "Margit the Fell Omen",
+                            Defeated = true,
                             Defense = 103,
                             Game_Id = 1,
                             Hp = 4074,
@@ -151,8 +152,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "dbe98d21-8266-4a1d-b8c3-d79a0bdc3f12",
+                            Id = "1f2a80ce-d103-4faa-b65b-09f5a0b8629b",
                             BossName = "Godrick the Grafted",
+                            Defeated = true,
                             Defense = 105,
                             Game_Id = 1,
                             Hp = 6080,
@@ -162,8 +164,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "d0bf53bf-eea8-4981-96fe-19e0f6993485",
+                            Id = "42c48104-2494-4071-9ab2-b33038137b2f",
                             BossName = "Red Wolf of Radagon",
+                            Defeated = false,
                             Defense = 107,
                             Game_Id = 1,
                             Hp = 2204,
@@ -173,8 +176,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "18ad68da-9304-4feb-ac11-6047d65c4e0d",
+                            Id = "0aed0e50-7ab6-467d-83ac-d89a9cc07395",
                             BossName = "Rennala, Queen of the Full Moon",
+                            Defeated = false,
                             Defense = 109,
                             Game_Id = 1,
                             Hp = 40000,
@@ -184,8 +188,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "b61c1f05-d89c-43d4-ae69-6e5d0fa00f0c",
+                            Id = "a1c86678-53d5-4e04-b69b-92e2ec6d62d9",
                             BossName = "Leonine Misbegotten",
+                            Defeated = true,
                             Defense = 104,
                             Game_Id = 1,
                             Hp = 2198,
@@ -195,8 +200,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "04f1d6de-e104-4c37-8e41-eecaff30bf42",
+                            Id = "992b3cb5-0bb7-4403-aa14-51cbe0ca69e7",
                             BossName = "Father Gascoigne",
+                            Defeated = false,
                             Defense = 95,
                             Game_Id = 2,
                             Hp = 2031,
@@ -206,8 +212,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "ef62f043-14c6-4140-bc24-89161461a63c",
+                            Id = "537845a8-56a2-46dd-aafd-6a92572be024",
                             BossName = "Gehrman, The First Hunter",
+                            Defeated = false,
                             Defense = 150,
                             Game_Id = 2,
                             Hp = 14293,
@@ -217,8 +224,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "21fa331b-5954-41fb-b562-27730cb1274b",
+                            Id = "22dbffc0-c436-4d26-90a5-b13c4c0f4967",
                             BossName = "Gwyn, Lord of Cinder",
+                            Defeated = false,
                             Defense = 120,
                             Game_Id = 3,
                             Hp = 4250,
@@ -228,8 +236,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "8ec60d2a-946d-4d22-971e-a9fc423e7342",
+                            Id = "a0e5c7a0-3686-4a28-8b7d-2843a15b733a",
                             BossName = "Ornstein",
+                            Defeated = false,
                             Defense = 100,
                             Game_Id = 3,
                             Hp = 1642,
@@ -239,8 +248,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "92347543-2a10-40a1-8b0f-850d39fd20c0",
+                            Id = "0bd0573f-f431-43ee-95f8-d364758dd8eb",
                             BossName = "Nashandra",
+                            Defeated = false,
                             Defense = 135,
                             Game_Id = 4,
                             Hp = 8770,
@@ -250,8 +260,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "82f0b6a9-e802-407e-8c04-5e1933d8cfea",
+                            Id = "452bd7c9-64e8-49eb-9931-6bd56d85e575",
                             BossName = "The Pursuer",
+                            Defeated = false,
                             Defense = 123,
                             Game_Id = 4,
                             Hp = 3500,
@@ -261,8 +272,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "b7ba2f00-749b-4189-8209-f9b21b3993ff",
+                            Id = "dfbd7b32-2d9a-4cf2-86d7-cb591159db85",
                             BossName = "Soul of Cinder",
+                            Defeated = false,
                             Defense = 150,
                             Game_Id = 5,
                             Hp = 10766,
@@ -272,8 +284,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "58bdbf8d-934b-4a73-b3ab-cb7f46ef4c34",
+                            Id = "3e45d52a-1d68-44ae-b4db-d57e97795a29",
                             BossName = "Pontiff Sulyvahn",
+                            Defeated = false,
                             Defense = 107,
                             Game_Id = 5,
                             Hp = 5106,
@@ -283,8 +296,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "c7145a87-1260-4ef1-a9a1-7e31a93aca74",
+                            Id = "25c2ca8a-7677-4ace-9f2a-7a9c9a278563",
                             BossName = "Isshin, the Sword Saint",
+                            Defeated = false,
                             Defense = 700,
                             Game_Id = 6,
                             Hp = 10000,
@@ -294,8 +308,9 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "ec1de4a3-39e8-4bd7-8f51-cbc167945cb7",
+                            Id = "9db9b94d-c87b-4ab8-80e5-cbcccd29c917",
                             BossName = "Genichiro Ashina",
+                            Defeated = false,
                             Defense = 600,
                             Game_Id = 6,
                             Hp = 10000,

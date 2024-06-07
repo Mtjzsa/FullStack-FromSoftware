@@ -55,7 +55,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
         }
 
 
-
+        //Register
         [HttpPut]
         public async Task<IActionResult> InsertUser([FromBody] RegisterViewModel model)
         {
@@ -73,6 +73,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             return Ok();
         }
 
+        //User info
         [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetUserInfo()
@@ -86,6 +87,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
                     FirstName = user.FirstName,
                     LastName = user.LastName,
                     Email = user.Email,
+                    DefeatedBosses = user.DefeatedBosses.Remove(user.DefeatedBosses.Length-1),
                     Roles = await _userManager.GetRolesAsync(user)
                 });
             }
