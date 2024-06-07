@@ -117,7 +117,11 @@
               "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
               "ToolTip": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
               "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
+<<<<<<< HEAD
               "ViewState": "AQIAAC8AAAAAAAAAAAAIwDUAAAAkAAAA",
+=======
+              "ViewState": "AQIAACMAAAAAAAAAAAAwwDUAAAAkAAAA",
+>>>>>>> 999bbe2e8c56e5b376467a088050716555e7dc34
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T13:48:51.35Z",
               "EditorCaption": ""
