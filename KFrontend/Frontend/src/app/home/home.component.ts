@@ -32,6 +32,19 @@ export class HomeComponent implements OnInit{
       console.log(this.games)
     })
   }  
+
+  moveSlider(direction: string) {
+    if (direction === 'prev') {
+      const lastItem = this.games.pop();
+      if (lastItem) {
+        this.games.unshift(lastItem);
+      }
+    }
+  }
+
+  readMore(item: Game) {
+    console.log("Read more clicked for item:", item);
+  }
 }
 
 

@@ -59,6 +59,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ReactiveFormsModule,
     MatInputModule,
     MatCheckboxModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
