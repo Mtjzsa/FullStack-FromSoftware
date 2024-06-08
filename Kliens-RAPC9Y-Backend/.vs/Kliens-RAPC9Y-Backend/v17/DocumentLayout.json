@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kf-rapc9y-2023-24-2\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\controllers\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\controllers\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kf-rapc9y-2023-24-2\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,6 +25,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kf-rapc9y-2023-24-2\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kf-rapc9y-2023-24-2\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\controllers\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\controllers\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|c:\\users\\matej\\vscode\\kf-rapc9y-2023-24-2\\kliens-rapc9y-backend\\kliens-rapc9y-backend\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33124E4F-F36F-42C0-BB94-45515CAC7BFC}|Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend.csproj|solutionrelative:kliens-rapc9y-backend\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,95 +50,97 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Models\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\RegisterViewModel.cs",
+              "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Models\\RegisterViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T11:13:32.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Program.cs",
               "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Program.cs",
               "ToolTip": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Program.cs",
               "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAXAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAQwDYAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T10:37:57.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T10:37:57.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\AppUser.cs",
               "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Models\\AppUser.cs",
               "ToolTip": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\AppUser.cs",
               "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Models\\AppUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T16:54:24.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T16:54:24.773Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ApiDbContext.cs",
               "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Data\\ApiDbContext.cs",
               "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Data\\ApiDbContext.cs",
               "ToolTip": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Data\\ApiDbContext.cs",
               "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Data\\ApiDbContext.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAawCcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T16:09:40.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T16:09:40.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\Game.cs",
               "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Models\\Game.cs",
               "ToolTip": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\Game.cs",
               "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Models\\Game.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:54:35.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:54:35.523Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Boss.cs",
               "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\Boss.cs",
               "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Models\\Boss.cs",
               "ToolTip": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Models\\Boss.cs",
               "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Models\\Boss.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAWAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T15:54:35.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T15:54:35.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "BossController.cs",
               "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
               "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
               "ToolTip": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
               "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Controllers\\BossController.cs",
-<<<<<<< HEAD
-              "ViewState": "AQIAAC8AAAAAAAAAAAAIwDUAAAAkAAAA",
-=======
-              "ViewState": "AQIAACMAAAAAAAAAAAAwwDUAAAAkAAAA",
->>>>>>> 999bbe2e8c56e5b376467a088050716555e7dc34
+              "ViewState": "AQIAADIAAAAAAAAAAAAIwDUAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T13:48:51.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T13:48:51.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Kliens-RAPC9Y-Backend\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\matej\\VSCode\\KF-RAPC9Y-2023-24-2\\Kliens-RAPC9Y-Backend\\Kliens-RAPC9Y-Backend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Kliens-RAPC9Y-Backend\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAIwFkAAABcAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAowEUAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T16:54:20.026Z",
               "EditorCaption": ""
