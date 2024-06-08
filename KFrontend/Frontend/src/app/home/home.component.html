@@ -1,1 +1,6 @@
-<p>home works!</p>
+<h1>Games Preview</h1>
+
+<div *ngFor="let game of games" style="display: grid; grid-template-columns: auto auto;padding: 25px;">
+  <img [src]="game.gameCover" alt="" style="height: 100px;">
+  <p>{{game.gameName}}</p>
+</div>

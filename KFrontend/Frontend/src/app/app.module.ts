@@ -22,7 +22,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
 
 //material designs
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
