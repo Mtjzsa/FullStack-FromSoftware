@@ -1,0 +1,10 @@
+<p>view-games works!</p>
+
+<h1>{{this.game.gameName}}</h1>
+<img [src]="this.game.gameCover" alt="">
+<p>{{this.game.releaseDate}}</p>
+<p>{{this.game.gameDescription}}</p>
+<h3 *ngFor="let item of this.game.bosses">
+  <p>{{item.bossName}}</p>
+</h3>
+
