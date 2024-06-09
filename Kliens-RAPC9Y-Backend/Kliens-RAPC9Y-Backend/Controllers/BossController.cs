@@ -27,7 +27,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             return ctx.Bosses;
         }
 
-
+        [Authorize]
         [HttpGet("{name}")]
         public IActionResult GetBoss(string name)
         {
@@ -40,6 +40,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             return Ok(boss); // Return 200 with the boss entity
         }
 
+        [Authorize]
         [HttpPost]
         public void AddBoss([FromBody] Boss b)
         {
@@ -47,6 +48,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             ctx.SaveChanges();
         }
 
+        [Authorize]
         [HttpPut]
         public void EditBoss([FromBody] Boss b)
         {
@@ -61,6 +63,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             ctx.SaveChanges();
         }
 
+        [Authorize]
         [HttpDelete("{name}")]
         public void DeleteBoss(string name)
         {
@@ -69,11 +72,11 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             ctx.SaveChanges();
         }
 
-        //[Authorize]
-        [HttpPost("{userName}/defeat/{bossName}")]
-        public IActionResult DefeatBoss(string userName, string bossName)
+        [Authorize]
+        [HttpPost("defeat/{bossName}")]
+        public IActionResult DefeatBoss(string bossName)
         {
-            var user = _userManager.Users.FirstOrDefault(t => t.UserName == userName);
+            var user = _userManager.Users.FirstOrDefault(t => t.UserName == this.User.Identity.Name);
             var boss = ctx.Bosses.FirstOrDefault(b => b.BossName == bossName);
 
             if (user == null || boss == null)
