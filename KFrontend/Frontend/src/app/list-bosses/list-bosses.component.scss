@@ -5,15 +5,14 @@ h1 {
 }
 
 mat-card {
-  margin-bottom: 10px;
-  margin-right: 10px;
+  margin: 30px;
   width: 300px;
   height: 450px;
   float: left;
   display: flex;
   flex-direction: column;
   border-radius: 28px;
-  align-items: stretch; /* Ensure all cards have the same height */
+  align-items: stretch;
 }
 
 mat-card-title{
@@ -38,7 +37,7 @@ mat-card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center content vertically */
+  justify-content: center;
   flex-grow: 1;
 }
 
