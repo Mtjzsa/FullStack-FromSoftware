@@ -28,6 +28,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ViewBossComponent } from './view-boss/view-boss.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ListGamesComponent,
     ListBossesComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
+    ViewBossComponent
   ],
   imports: [
     BrowserModule,
