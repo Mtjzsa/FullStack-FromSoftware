@@ -6,6 +6,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { ListBossesComponent } from './list-bosses/list-bosses.component';
 import { ListGamesComponent } from './list-games/list-games.component';
+import { ViewBossComponent } from './view-boss/view-boss.component';
+import { ApiService } from './api.service';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -15,6 +17,7 @@ const routes: Routes = [
   { path: 'list-bosses', component: ListBossesComponent},
   { path: 'list-games', component: ListGamesComponent},
 
+  {path: "view-boss/:bossName", component: ViewBossComponent, canActivate: [ApiService]},
 
   { path: '**',  redirectTo: 'home', pathMatch: 'full'}
 ];
