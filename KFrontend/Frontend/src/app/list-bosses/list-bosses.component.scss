@@ -1,0 +1,65 @@
+h1 {
+  margin-bottom: 50px;
+  font-size: 2em;
+  text-align: center;
+}
+
+mat-card {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 300px;
+  height: 450px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  border-radius: 28px;
+  align-items: stretch; /* Ensure all cards have the same height */
+}
+
+mat-card-title{
+  font-size: 1rem;
+  text-align: center;
+}
+
+mat-card mat-divider{
+    margin: 10px 0;
+}
+
+mat-card {
+  img {
+    border-radius: 20px;
+    height: 150px;
+    display: block;
+    margin: auto;
+  }
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  flex-grow: 1;
+}
+
+button[mat-stroked-button] {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.subject-id {
+  font-size: 0.8em;
+  color: #929292;
+}
+
+.gridDisplay {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+#clear {
+  clear: both;
+}

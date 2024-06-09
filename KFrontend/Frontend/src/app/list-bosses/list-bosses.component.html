@@ -1,1 +1,32 @@
-<p>list-bosses works!</p>
+<h1>All of the bosses that can be found in the games</h1>
+
+
+<div class="gridDisplay">
+  <mat-card class="example-card" *ngFor="let boss of bosses">
+  
+    <mat-card-header>
+      <mat-card-title-group>
+        <img mat-card-image [src]="boss.image">
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-title>{{boss.bossName}}</mat-card-title>
+        <mat-card-subtitle>{{boss.location}}</mat-card-subtitle>
+      <p>Souls dropped upon death:  {{boss.souls}}</p>
+      <p>Game: {{ getGame(boss, games) }}</p>
+      <mat-divider></mat-divider>
+      <p class="subject-id">{{boss.id}}</p>
+      <mat-divider></mat-divider>
+      <button
+        mat-stroked-button
+        [routerLink]="['', boss.bossName]"
+      >
+        <mat-icon arial-hidden="false"  aria-label="Edit icon" fontIcon="edit">
+        </mat-icon>
+        View Boss
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div id="clear"></div>
