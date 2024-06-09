@@ -5,7 +5,11 @@
       <div class='content'>
         <h2 class='title'>{{ item.gameName }}</h2>
         <p class='description'>Release Date: {{ item.releaseDate}}</p>
-        <button (click)="readMore(item)">Read More</button>
+        <button
+          [routerLink]="['/view-game/', item.gameName]"
+        >
+          Read More
+        </button>
       </div>
     </li>
   </ul>

@@ -10,7 +10,10 @@
 			<!-- </a> -->
 			<span>Inspect</span>
 			<div class="pic" [style.background-image]="'url(' + game.gameCover + ')'"></div>
-			<button></button>
+			<button
+				[routerLink]="['/view-game/', game.gameName]"
+			>
+			</button>
 		</div>
 	</div>
 </div>

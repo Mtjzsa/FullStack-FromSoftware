@@ -42,10 +42,6 @@ export class HomeComponent implements OnInit{
       }
     }
   }
-
-  readMore(item: Game) {
-    console.log("Read more clicked for item:", item);
-  }
 }
 
 
