@@ -67,6 +67,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
                 SecurityStamp = Guid.NewGuid().ToString(),
                 FirstName = model.FirstName,
                 LastName = model.LastName,
+                DefeatedBosses = model.DefeatedBosses,
             };
             await _userManager.CreateAsync(user, model.Password);
             await _userManager.AddToRoleAsync(user, "User");

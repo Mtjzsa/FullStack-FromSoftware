@@ -1,0 +1,12 @@
+<h1>Login</h1>
+
+<mat-form-field appearance="outline">
+  <mat-label>Email address</mat-label>
+  <input
+      matInput
+      [(ngModel)]="this.loginModel.userName"
+      [formControl]="this.username">
+  <mat-icon matSuffix>email</mat-icon>
+  <mat-hint>Your registered email address</mat-hint>
+  <!-- <mat-error *ngIf="this.username.invalid">{{getEmailErrorMessage()}}</mat-error> -->
+</mat-form-field>

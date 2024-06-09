@@ -1,0 +1,20 @@
+
+<section class="slider-section clear">
+  <ul class='slider'>
+    <li class='item' *ngFor="let item of games" [style.background-image]="'url(' + item.gameCover + ')'">
+      <div class='content'>
+        <h2 class='title'>{{ item.gameName }}</h2>
+        <p class='description'>Release Date: {{ item.releaseDate}}</p>
+        <button (click)="readMore(item)">Read More</button>
+      </div>
+    </li>
+  </ul>
+  <div class='nav'>
+    <button 
+      mat-raised-button
+      name="arrow-back-outline" (click)="moveSlider('prev')"
+      >
+        Next Game
+      </button>
+  </div>
+</section>

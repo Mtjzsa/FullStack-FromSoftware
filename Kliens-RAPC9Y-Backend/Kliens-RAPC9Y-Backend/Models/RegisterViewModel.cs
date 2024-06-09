@@ -1,4 +1,6 @@
-﻿namespace Kliens_RAPC9Y_Backend.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Kliens_RAPC9Y_Backend.Models
 {
     public class RegisterViewModel
     {
@@ -11,5 +13,8 @@
         public string LastName { get; set; }
 
         public string Password { get; set; }
+
+        [StringLength(2000)]
+        public string DefeatedBosses { get; set; }
     }
 }
