@@ -7,5 +7,6 @@ export class Boss{
   public souls : number = 0
   public defense : number = 0
   public image : string = ""
+  public description : string = ""
 
 }

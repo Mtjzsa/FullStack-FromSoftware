@@ -43,6 +43,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             old.GameName = g.GameName;
             old.ReleaseDate = g.ReleaseDate;
             old.GameCover = g.GameCover;
+            old.GameDescription = g.GameDescription;
             ctx.SaveChanges();
         }
 

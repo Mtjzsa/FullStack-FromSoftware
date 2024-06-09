@@ -37,6 +37,9 @@ namespace Kliens_RAPC9Y_Backend.Models
         [Required]
         public string Image { get; set; }
 
+        [Required]
+        public string Description { get; set; }
+
         public Boss()
         {
             Id = Guid.NewGuid().ToString();

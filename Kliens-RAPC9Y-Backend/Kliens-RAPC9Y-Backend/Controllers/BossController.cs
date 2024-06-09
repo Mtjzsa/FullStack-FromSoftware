@@ -60,6 +60,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             old.Location = b.Location;
             old.Defense = b.Defense;
             old.Image = b.Image;
+            old.Description = b.Description;
             ctx.SaveChanges();
         }
 

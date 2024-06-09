@@ -6,6 +6,7 @@ export class Game {
   public releaseDate : number = 0
   public gameCover : string = ""
   public bosses : Array<Boss> = []
+  public gameDescription : string = ""
 
   public createBosses(bossList : Array<Boss>){
     

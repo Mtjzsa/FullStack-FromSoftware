@@ -31,6 +31,7 @@ export class ListBossesComponent {
         s.image = x.image
         s.location = x.location
         s.souls = x.souls
+        s.description = x.description
         this.bosses.push(s)
       })
       console.log(this.bosses)
@@ -45,6 +46,7 @@ export class ListBossesComponent {
         s.gameCover = x.gameCover
         s.releaseDate = x.releaseDate
         s.bosses = x.bosses
+        s.gameDescription = x.gameDescription
         this.games.push(s)
       })
       console.log(this.games)

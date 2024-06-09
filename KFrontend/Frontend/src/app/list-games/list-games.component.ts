@@ -26,6 +26,7 @@ export class ListGamesComponent implements OnInit{
         s.gameCover = x.gameCover
         s.releaseDate = x.releaseDate
         s.bosses = x.bosses
+        s.gameDescription = x.gameDescription
         this.games.push(s)
       })
       console.log(this.games)

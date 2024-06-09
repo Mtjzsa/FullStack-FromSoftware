@@ -22,6 +22,9 @@ namespace Kliens_RAPC9Y_Backend.Models
         [NotMapped]
         public virtual ICollection<Boss> Bosses { get; set; }
 
+        [Required]
+        public string GameDescription { get; set; }
+
         public Game()
         {
             this.Bosses = new HashSet<Boss>();
