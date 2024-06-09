@@ -82,6 +82,18 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             var user = _userManager.Users.FirstOrDefault(t => t.UserName == this.User.Identity.Name);
             if (user != null)
             {
+                if (user.DefeatedBosses.Length == 0)
+                {
+                    return Ok(new
+                    {
+                        UserName = user.UserName,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Email = user.Email,
+                        DefeatedBosses = user.DefeatedBosses,
+                        Roles = await _userManager.GetRolesAsync(user)
+                    });
+                }
                 return Ok(new
                 {
                     UserName = user.UserName,
