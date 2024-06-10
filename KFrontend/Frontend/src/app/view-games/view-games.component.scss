@@ -1,0 +1,70 @@
+h1 {
+  margin: 0;
+  font-size: 5em; /* Increase the font size for a very big title */
+  text-align: center;
+  line-height: 100vh; /* Center the title vertically */
+}
+
+.title-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* No background */
+}
+
+.parallax-container {
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+.parallax-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+.content {
+  padding: 50px 0;
+  z-index: 2;
+}
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.card {
+  width: calc(30% - 20px);
+  margin: 10px;
+  padding: 20px;
+  background-color: #555;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  // height: 400px; /* Set a fixed height for the cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.small-card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.small-card {
+  width: calc(20% - 20px);
+  margin: 10px;
+  padding: 20px;
+  background-color: #555; /* Gray background for the card */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

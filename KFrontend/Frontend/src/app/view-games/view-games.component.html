@@ -1,10 +1,52 @@
-<p>view-games works!</p>
 
-<h1>{{this.game.gameName}}</h1>
-<img [src]="this.game.gameCover" alt="">
-<p>{{this.game.releaseDate}}</p>
-<p>{{this.game.gameDescription}}</p>
-<h3 *ngFor="let item of this.game.bosses">
-  <p>{{item.bossName}}</p>
-</h3>
+<div class="title-container">
+  
+  <h1>{{this.game.gameName}}</h1>
+</div>
 
+<div class="parallax-container" >
+  <div class="parallax-image" [style.background-image]="'url(' + game.gameCover + ')'"></div>
+</div>
+
+  
+<div class="content">
+  <div class="card-container">
+    <div class="card">
+      <h2>About Elden Ring</h2>
+      <p>Elden Ring is an upcoming action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. It is being created by game director Hidetaka Miyazaki and author George R. R. Martin, known for his work on the A Song of Ice and Fire series.</p>
+    </div>
+    <div class="card">
+      <h2>Gameplay</h2>
+      <p>Elden Ring features an open-world environment with a dynamic weather system and day-night cycle. Players can explore the world on horseback or on foot, encountering various enemies and non-playable characters along the way. The game retains the challenging combat and intricate level design that FromSoftware is known for.</p>
+    </div>
+    <div class="card">
+      <h2>Release Date</h2>
+      <p>Elden Ring is scheduled to be released on [Release Date].</p>
+    </div>
+  </div>
+</div>
+
+<div class="parallax-container">
+  <div class="parallax-image" [style.background-image]="'url(' + game.gameCover + ')'"></div>
+</div>
+
+<div class="content">
+  <div class="small-card-container">
+    <div class="small-card">
+      <h2>Card 1</h2>
+      <p>This is card 1 of the big card.</p>
+    </div>
+    <div class="small-card">
+      <h2>Card 2</h2>
+      <p>This is card 2 of the big card.</p>
+    </div>
+    <div class="small-card">
+      <h2>Card 3</h2>
+      <p>This is card 3 of the big card.</p>
+    </div>
+    <div class="small-card">
+      <h2>Card 4</h2>
+      <p>This is card 4 of the big card.</p>
+    </div>
+  </div>
+</div>
