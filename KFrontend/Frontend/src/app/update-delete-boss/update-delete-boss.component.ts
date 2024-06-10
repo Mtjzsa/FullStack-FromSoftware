@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Boss } from '../_models/boss';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Game } from '../_models/game';
@@ -13,14 +13,16 @@ import { Game } from '../_models/game';
 export class UpdateDeleteBossComponent implements OnInit{
   http: HttpClient
   route: ActivatedRoute
+  router : Router
   boss: Boss
   games : Array<Game>
   snackbar: MatSnackBar
   deleteDisabled: boolean
 
-  constructor(http: HttpClient, route: ActivatedRoute, snackBar: MatSnackBar){
+  constructor(http: HttpClient, route: ActivatedRoute, snackBar: MatSnackBar, router: Router){
     this.http = http
     this.route = route
+    this.router = router
     this.boss= new Boss()
     this.games = []
     this.snackbar = snackBar
@@ -36,7 +38,7 @@ export class UpdateDeleteBossComponent implements OnInit{
       this.http
         .get<any>('http://localhost:5146/Boss/' + bossName, {headers: headers})
         .subscribe(resp =>{
-            this.boss.id = resp.id
+          this.boss.id = resp.id
           this.boss.bossName = resp.bossName
           this.boss.game_Id = resp.game_Id
           this.boss.defense = resp.defense
@@ -66,10 +68,48 @@ export class UpdateDeleteBossComponent implements OnInit{
   }
 
   public updateBoss() : void{
-
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + localStorage.getItem('nikprog-practiceapi-token')
+    })
+    this.http
+    .put('http://localhost:5146/Boss/',
+      this.boss,
+      { headers: headers}
+    )
+    .subscribe(
+      (success) =>{
+        this.snackbar.open("Update was successful!", "Close", {duration: 5000})
+        this.router.navigate(['/list-bosses'])
+      },
+      (error)=>{
+        this.snackbar.open("Error occured, please try again.", "Close", {duration:5000})
+      }
+    )
   }
 
   public deleteBoss(bossName : string) : void {
+    if (bossName === '' || bossName === null){
+      return
+    }
 
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + localStorage.getItem('nikprog-practiceapi-token')
+    })
+    this.http
+    .delete(
+      '/api/Subject/' + bossName,
+      { headers: headers}
+    )
+    .subscribe(
+      (success)=>{
+        this.snackbar.open("Delete was successful!", "Close", {duration: 5000})
+        this.router.navigate(['/list-bosses'])
+      },
+      (error)=>{
+        this.snackbar.open("Error occured, please try again.", "Close", {duration: 5000})
+      }
+    )
   }
 }

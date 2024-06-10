@@ -53,7 +53,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
         [HttpPut]
         public void EditBoss([FromBody] Boss b)
         {
-            var old = ctx.Bosses.FirstOrDefault(t=>t.BossName == b.BossName);
+            var old = ctx.Bosses.FirstOrDefault(t=>t.Id == b.Id);
             old.Game_Id = b.Game_Id;
             old.BossName = b.BossName;
             old.Hp = b.Hp;
