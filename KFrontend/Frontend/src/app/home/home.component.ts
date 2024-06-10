@@ -17,10 +17,11 @@ export class HomeComponent implements OnInit{
     this.games = []
   }
   
+  
   ngOnInit(): void {
     this.http.get<Array<Game>>('http://localhost:5146/Game')
     .subscribe(resp => {
-      resp.map(x=>{
+      resp.slice(-6).map(x=>{
         let s = new Game()
         s.id = x.id
         s.gameName = x.gameName
@@ -31,7 +32,7 @@ export class HomeComponent implements OnInit{
         this.games.push(s)
       })
       console.log(this.games)
-    })
+    })  
   }  
 
   moveSlider(direction: string) {
