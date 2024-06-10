@@ -10,6 +10,7 @@ import { ViewBossComponent } from './view-boss/view-boss.component';
 import { ApiService } from './api.service';
 import { ViewGamesComponent } from './view-games/view-games.component';
 import { CreateBossComponent } from './create-boss/create-boss.component';
+import { CreateGameComponent } from './create-game/create-game.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: "view-game/:gameName", component: ViewGamesComponent, canActivate: [ApiService]},
 
   {path: "create-boss", component: CreateBossComponent, canActivate: [ApiService]},
+  {path: "create-game", component: CreateGameComponent, canActivate: [ApiService]},
 
   { path: '**',  redirectTo: 'home', pathMatch: 'full'}
 ];

@@ -1,5 +1,6 @@
 ﻿using Kliens_RAPC9Y_Backend.Data;
 using Kliens_RAPC9Y_Backend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,13 +23,14 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             return ctx.Games;
         }
 
-
+        [Authorize]
         [HttpGet("{name}")]
         public Game? GetGame(string name)
         {
             return ctx.Games.FirstOrDefault(t => t.GameName == name);
         }
 
+        [Authorize]
         [HttpPost]
         public void AddGame([FromBody] Game g)
         {
@@ -36,6 +38,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             ctx.SaveChanges();
         }
 
+        [Authorize]
         [HttpPut]
         public void EditGame([FromBody] Game g)
         {
@@ -47,6 +50,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
             ctx.SaveChanges();
         }
 
+        [Authorize]
         [HttpDelete("{name}")]
         public void DeleteGame(string name)
         {
