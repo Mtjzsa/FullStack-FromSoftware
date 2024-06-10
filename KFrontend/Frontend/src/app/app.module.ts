@@ -32,6 +32,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSelectModule} from '@angular/material/select';
+import { CreateGameComponent } from './create-game/create-game.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {MatSelectModule} from '@angular/material/select';
     NavigationComponent,
     ViewBossComponent,
     ViewGamesComponent,
-    CreateBossComponent
+    CreateBossComponent,
+    CreateGameComponent
   ],
   imports: [
     BrowserModule,
