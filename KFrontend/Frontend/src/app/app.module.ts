@@ -35,6 +35,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { CreateGameComponent } from './create-game/create-game.component';
 import { UpdateDeleteBossComponent } from './update-delete-boss/update-delete-boss.component';
 import { UpdateDeleteGameComponent } from './update-delete-game/update-delete-game.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProgressComponent } from './progress/progress.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { UpdateDeleteGameComponent } from './update-delete-game/update-delete-ga
     CreateBossComponent,
     CreateGameComponent,
     UpdateDeleteBossComponent,
-    UpdateDeleteGameComponent
+    UpdateDeleteGameComponent,
+    ProfileComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
