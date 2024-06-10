@@ -33,6 +33,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSelectModule} from '@angular/material/select';
 import { CreateGameComponent } from './create-game/create-game.component';
+import { UpdateDeleteBossComponent } from './update-delete-boss/update-delete-boss.component';
+import { UpdateDeleteGameComponent } from './update-delete-game/update-delete-game.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { CreateGameComponent } from './create-game/create-game.component';
     ViewBossComponent,
     ViewGamesComponent,
     CreateBossComponent,
-    CreateGameComponent
+    CreateGameComponent,
+    UpdateDeleteBossComponent,
+    UpdateDeleteGameComponent
   ],
   imports: [
     BrowserModule,

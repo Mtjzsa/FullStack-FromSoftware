@@ -41,7 +41,7 @@ export class ViewBossComponent implements OnInit{
           this.boss.defense = resp.defense
           this.boss.hp = resp.hp
           this.boss.image = resp.image
-          this.boss.location = resp.localhost
+          this.boss.location = resp.location
           this.boss.souls = resp.souls
           this.boss.description = resp.description
       })

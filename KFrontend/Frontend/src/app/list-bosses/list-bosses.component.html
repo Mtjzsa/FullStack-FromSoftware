@@ -25,6 +25,15 @@
         </mat-icon>
         View Boss
       </button>
+
+      <button
+        mat-stroked-button
+        [routerLink]="['/updatedelete-boss/', boss.bossName]"
+      >
+        <mat-icon arial-hidden="false"  aria-label="Edit icon" fontIcon="edit">
+        </mat-icon>
+        Edit Boss
+      </button>
     </mat-card-content>
   </mat-card>
 </div>

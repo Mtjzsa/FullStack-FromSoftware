@@ -1,0 +1,14 @@
+h1 {
+  margin-bottom: 50px;
+}
+
+mat-form-field, mat-checkbox, button {
+  width: 75%;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
