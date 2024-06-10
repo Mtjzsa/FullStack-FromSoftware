@@ -12,6 +12,7 @@ export class ListBossesComponent {
   http: HttpClient
   bosses: Array<Boss>
   games: Array<Game>
+  searchTerm: string = '';
   
   constructor(http: HttpClient) {
     this.http = http,
@@ -34,7 +35,6 @@ export class ListBossesComponent {
         s.description = x.description
         this.bosses.push(s)
       })
-      console.log(this.bosses)
     })
 
     this.http.get<Array<Game>>('http://localhost:5146/Game')
@@ -49,17 +49,18 @@ export class ListBossesComponent {
         s.gameDescription = x.gameDescription
         this.games.push(s)
       })
-      console.log(this.games)
     })
   }
 
 
   public getGame(boss : Boss, games : Array<Game>) : string {
-    for (let i = 0; i < games.length; i++) {
-      if (boss.game_Id === games[i].id){
-        return games[i].gameName
-      }
-    }
-    return "No game"
+    const game = games.find(game => game.id === boss.game_Id);
+    return game ? game.gameName : 'No game';
+  }
+
+  public filteredBosses(): Array<Boss> {
+    return this.bosses.filter(boss =>
+      boss.bossName.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
   }
 }

@@ -1,7 +1,17 @@
 h1 {
-  margin: 50px 0px;
+  margin: 50px 0;
   font-size: 2em;
   text-align: center;
+}
+
+.search-bar {
+  margin: 20px auto;
+  display: block;
+  width: 50%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 mat-card {
@@ -15,23 +25,21 @@ mat-card {
   align-items: stretch;
 }
 
-mat-card-title{
+mat-card-title {
   font-size: 1rem;
   text-align: center;
 }
 
-mat-card mat-divider{
-    margin: 10px 0;
+mat-card mat-divider {
+  margin: 10px 0;
 }
 
-mat-card {
-  img {
-    border-radius: 20px;
-    height: 150px;
-    max-width: 260px;
-    display: block;
-    margin: auto;
-  }
+mat-card img {
+  border-radius: 20px;
+  height: 150px;
+  max-width: 260px;
+  display: block;
+  margin: auto;
 }
 
 mat-card-content {
