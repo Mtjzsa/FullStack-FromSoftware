@@ -99,7 +99,7 @@ export class UpdateDeleteBossComponent implements OnInit{
     })
     this.http
     .delete(
-      '/api/Subject/' + bossName,
+      'http://localhost:5146/Boss/' + bossName,
       { headers: headers}
     )
     .subscribe(
