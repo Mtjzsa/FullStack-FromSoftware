@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Game } from '../_models/game';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './view-games.component.html',
   styleUrls: ['./view-games.component.scss']
 })
-export class ViewGamesComponent {
+export class ViewGamesComponent implements OnInit{
   http: HttpClient
   route: ActivatedRoute
   snackBar:MatSnackBar

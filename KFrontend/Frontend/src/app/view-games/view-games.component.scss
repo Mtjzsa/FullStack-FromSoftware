@@ -1,23 +1,9 @@
-h1 {
-  margin: 0;
-  font-size: 5em; /* Increase the font size for a very big title */
-  text-align: center;
-  line-height: 100vh; /* Center the title vertically */
-}
-
-.title-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent; /* No background */
-}
-
 .parallax-container {
   height: 100vh;
   overflow-x: hidden;
   position: relative;
 }
+
 .parallax-image {
   position: absolute;
   top: 0;
@@ -29,18 +15,67 @@ h1 {
   background-attachment: fixed;
   z-index: 1;
 }
-.content {
-  padding: 50px 0;
-  z-index: 2;
+
+.parallax-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(136, 136, 136, 0.7);
+  border: 1px solid rgba(136, 136, 136, 0.7);
+  border-radius: 120px;
+  padding: 100px;
+  max-width: 80%;
 }
+
+.parallax-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  background-color: rgba(136, 136, 136, 0.7);
+  border: 1px solid rgba(136, 136, 136, 0.7);
+  border-radius: 30px;
+  /* Adjust max-width and padding */
+  max-width: 100%; /* You can increase this value to make it wider */
+  padding: 90px;
+}
+
+
+h1 {
+  font-size: 4.5em;
+  margin: 0;
+}
+
+p{
+  font-size: 1.3em;
+}
+
+// .content {
+//   padding: 50px 0;
+//   z-index: 2;
+// }
+
 .card-container {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
   flex-wrap: wrap;
 }
-.card {
+
+.w6{
+  width: calc(60% - 20px);
+}
+.w4{
   width: calc(30% - 20px);
+}
+.card {
   margin: 10px;
   padding: 20px;
   background-color: #555;
@@ -48,23 +83,8 @@ h1 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: opacity 0.5s ease-in-out;
-  // height: 400px; /* Set a fixed height for the cards */
+  height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-.small-card-container {
-  display: flex;
   justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.small-card {
-  width: calc(20% - 20px);
-  margin: 10px;
-  padding: 20px;
-  background-color: #555; /* Gray background for the card */
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
