@@ -29,7 +29,9 @@ export class ListGamesComponent implements OnInit{
         s.gameDescription = x.gameDescription
         this.games.push(s)
       })
-      console.log(this.games)
+      this.games.sort((a, b) => b.bosses.length - a.bosses.length);
+
+      console.log(this.games);
     })
   }
 }
