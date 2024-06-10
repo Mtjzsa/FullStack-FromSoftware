@@ -42,7 +42,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
         [HttpPut]
         public void EditGame([FromBody] Game g)
         {
-            var old = ctx.Games.FirstOrDefault(t => t.GameName == g.GameName);
+            var old = ctx.Games.FirstOrDefault(t => t.Id == g.Id);
             old.GameName = g.GameName;
             old.ReleaseDate = g.ReleaseDate;
             old.GameCover = g.GameCover;

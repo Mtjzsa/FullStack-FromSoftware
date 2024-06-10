@@ -17,6 +17,13 @@
         <mat-divider></mat-divider>
         <h2>Current Boss Count</h2>
         <p>This game has {{this.game.bosses.length}} boses</p>
+        <mat-divider></mat-divider>
+        <div class="functions">
+          <a
+            [routerLink]="['/updatedelete-game/', game.gameName]"
+          >
+            Edit Game</a>
+        </div>
       </div>
     </div>
   </div>
