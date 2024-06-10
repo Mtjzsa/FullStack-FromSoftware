@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Boss } from '../_models/boss';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Game } from '../_models/game';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-boss',
@@ -12,12 +13,14 @@ import { Game } from '../_models/game';
 export class CreateBossComponent implements OnInit {
   http: HttpClient
   boss: Boss
+  router: Router
   snackBar: MatSnackBar
   games : Array<Game>
 
-  constructor(http: HttpClient, snackBar: MatSnackBar) {
+  constructor(http: HttpClient, snackBar: MatSnackBar, router : Router) {
     this.http = http
     this.boss = new Boss()
+    this.router = router
     this.games = []
     this.snackBar = snackBar
   }
@@ -52,6 +55,7 @@ export class CreateBossComponent implements OnInit {
       .subscribe(
         (success) => {
           this.snackBar.open('Create was successful!', 'Close', { duration: 5000 })
+          this.router.navigate(['/list-bosses'])
         },
         (error) => {
           this.snackBar.open('Error occured, please try again.', 'Close', { duration: 5000 })
