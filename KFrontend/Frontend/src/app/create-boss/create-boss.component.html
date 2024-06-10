@@ -1,0 +1,75 @@
+<h1>Create Boss</h1>
+
+<mat-form-field appearance="outline">
+    <mat-label>Boss Name</mat-label>
+    <input matInput
+        [(ngModel)]="this.boss.bossName">
+    <mat-icon matSuffix>text_fields</mat-icon>
+    <mat-hint>Name of the boss</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Game</mat-label>
+  <mat-select [(ngModel)]="this.boss.game_Id">
+      <mat-option *ngFor="let game of games" [value]="game.id">
+          {{ game.gameName }}
+      </mat-option>
+  </mat-select>
+  <mat-icon matSuffix>text_fields</mat-icon>
+  <mat-hint>Select the game where the boss is in</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Location</mat-label>
+  <input matInput
+      [(ngModel)]="this.boss.location">
+  <mat-icon matSuffix>text_fields</mat-icon>
+  <mat-hint>Location of the boss</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Hp</mat-label>
+  <input matInput
+      [(ngModel)]="this.boss.hp">
+  <mat-icon matSuffix>text_fields</mat-icon>
+  <mat-hint>Hp of the subject</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+    <mat-label>Defense</mat-label>
+    <input matInput
+        [(ngModel)]="this.boss.defense">
+    <mat-icon matSuffix>text_fields</mat-icon>
+    <mat-hint>Image link of the subject</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+    <mat-label>Souls</mat-label>
+    <input matInput
+        [(ngModel)]="this.boss.souls">
+    <mat-icon matSuffix>text_fields</mat-icon>
+    <mat-hint>Credit value of the subject</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+    <mat-label>Boss Description</mat-label>
+    <textarea matInput 
+        [(ngModel)]="this.boss.description"></textarea>
+    <mat-hint>Number of registered students for the subject</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Boss profile picture</mat-label>
+  <input matInput 
+      [(ngModel)]="this.boss.image">
+  <mat-hint>Image of the boss</mat-hint>
+</mat-form-field>
+
+<button
+    mat-flat-button
+    color="accent"
+    (click)="createBoss()"
+>    
+    Create Boss
+</button>
+
