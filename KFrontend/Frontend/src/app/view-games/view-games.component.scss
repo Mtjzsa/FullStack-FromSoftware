@@ -28,7 +28,7 @@
   border: 1px solid rgba(136, 136, 136, 0.7);
   border-radius: 120px;
   padding: 100px;
-  max-width: 80%;
+  width: 60%;
 }
 
 .parallax-info {
@@ -43,20 +43,30 @@
   border: 1px solid rgba(136, 136, 136, 0.7);
   border-radius: 30px;
   /* Adjust max-width and padding */
-  max-width: 100%; /* You can increase this value to make it wider */
+  width: 70%; /* You can increase this value to make it wider */
   padding: 90px;
 }
 
 
 h1 {
-  font-size: 4.5em;
+  font-size: 6vh;
   margin: 0;
+  line-height: 50px;
+}
+
+h2 {
+  font-size: 3.5vh;
+  margin: 20px 0;
 }
 
 p{
-  font-size: 1.3em;
+  font-size: 2.5vh;
 }
 
+h1, h2, p {
+  word-wrap: break-word;
+
+}
 // .content {
 //   padding: 50px 0;
 //   z-index: 2;
@@ -66,7 +76,7 @@ p{
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 }
 
 .w6{
@@ -83,7 +93,7 @@ p{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: opacity 0.5s ease-in-out;
-  height: 400px;
+  // height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
