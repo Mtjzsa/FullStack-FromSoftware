@@ -44,6 +44,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
         [HttpPost]
         public void AddBoss([FromBody] Boss b)
         {
+            b.Id = Guid.NewGuid().ToString();
             ctx.Bosses.Add(b);
             ctx.SaveChanges();
         }
