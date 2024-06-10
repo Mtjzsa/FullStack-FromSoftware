@@ -8,6 +8,7 @@
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="/list-bosses">List Bosses</button>
     <button mat-menu-item routerLink="/list-games">List Games</button>
+    <button mat-menu-item routerLink="/create-boss" *ngIf="this.api.isLoggedIn()">Create Boss</button>
   </mat-menu>
   
   <button 
