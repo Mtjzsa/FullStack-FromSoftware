@@ -1,1 +1,32 @@
-<p>profile works!</p>
+<div class="profile-container">
+  <div class="profile-header">
+    <div>
+      <mat-icon>person</mat-icon>
+      {{ appUser.userName }}
+    </div>
+    <a
+    mat-raised-button
+    color="warn"
+    (click)="deleteMyself()">
+    Delete myself
+    <mat-icon aria-label="Example icon button with a home icon" color="basic">edit</mat-icon>
+    </a>
+  
+  </div>
+  <div class="profile-details">
+    <div class="left">
+      <div class="item">
+        <label>Email:</label>
+        <span>{{ appUser.email }}</span>
+      </div>
+      <div class="item">
+        <label>First Name:</label>
+        <span>{{ appUser.firstName }}</span>
+      </div>
+      <div class="item">
+        <label>Last Name:</label>
+        <span>{{ appUser.lastName }}</span>
+      </div>
+    </div>
+  </div>
+</div>

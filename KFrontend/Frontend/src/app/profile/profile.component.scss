@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.profile-header div {
+  padding: 10px;
+  mat-icon {
+    scale: 3;
+    margin-right: 20px;
+  }
+}
+
+.profile-container {
+  margin: 50px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px; /* Add padding to the container */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.profile-header {
+  background-color: rgba(255, 255, 107, 1);
+  color: black;
+  padding: 20px;
+  font-size: 3em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  
+  a {
+    margin-right: 20px;
+  }
+  mat-icon {
+    scale: 1.5;
+    margin-right: 20px;
+  }
+}
+
+.profile-details {
+  padding: 20px;
+  background-color: #333;
+  height: 20vh;
+  display: flex; /* Use flexbox for .profile-details */
+  align-items: center; /* Center items vertically */
+}
+
+.profile-details .left {
+  display: flex; /* Use flexbox for .left */
+  flex-direction: column; /* Align items in a column */
+  justify-content: space-between; /* Evenly distribute space between items */
+  padding: 0 10px;
+  flex: 1;
+}
+
+.profile-details .item {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+}
+
+.profile-details .item label, .profile-details .item span {
+  font-size: 2em;
+}
+
+.profile-details .right {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  font-size: 1.2em; /* Adjust font size if needed */
+  flex: 1;
+}

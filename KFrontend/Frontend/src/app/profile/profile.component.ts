@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AppUser } from '../_models/appuser';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-profile',
@@ -10,10 +12,16 @@ import { AppUser } from '../_models/appuser';
 export class ProfileComponent implements OnInit{
   http: HttpClient
   appUser : AppUser
+  route: ActivatedRoute
+  router : Router
+  snackbar: MatSnackBar
 
-  constructor(http: HttpClient) {
+  constructor(http: HttpClient, route: ActivatedRoute, snackBar: MatSnackBar, router: Router) {
     this.http = http
     this.appUser = new AppUser
+    this.route = route
+    this.router = router
+    this.snackbar = snackBar
   }
 
   ngOnInit(): void {
@@ -31,4 +39,27 @@ export class ProfileComponent implements OnInit{
     })
   }
 
+  public deleteMyself(){
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + localStorage.getItem('nikprog-practiceapi-token')
+    })
+    this.http
+    .delete(
+      'http://localhost:5146/Auth/',
+      { headers: headers}
+    )
+    .subscribe(
+      (success)=>{
+        this.snackbar.open("Delete was successful!", "Close", {duration: 5000})
+        localStorage.setItem('nikprog-practiceapi-token', '')
+        localStorage.setItem('nikprog-practiceapi-token-expiration', '')
+        localStorage.clear()
+        this.router.navigate(['/home'])
+      },
+      (error)=>{
+        this.snackbar.open("Error occured, please try again.", "Close", {duration: 5000})
+      }
+    )
+  }
 }
