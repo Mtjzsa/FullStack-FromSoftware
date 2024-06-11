@@ -1,0 +1,63 @@
+<nav>
+
+  <div>
+    <a  routerLink="/home">
+      Home
+    </a>
+  
+    <a  [matMenuTriggerFor]="menu">Functions</a>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/list-bosses">List Bosses</button>
+      <button mat-menu-item routerLink="/list-games">List Games</button>
+      <button mat-menu-item routerLink="/create-boss" *ngIf="this.api.isLoggedIn()">Create Boss</button>
+      <button mat-menu-item routerLink="/create-game" *ngIf="this.api.isLoggedIn()">Create Game</button>
+    </mat-menu>
+    
+    <a  routerLink="/statistics">
+      Statistics
+    </a>
+
+    <a  routerLink="/progress" *ngIf="this.api.isLoggedIn()">
+      Progress
+    </a>
+  </div>
+
+  <div>
+
+    <a 
+       
+      routerLink="/register"
+      *ngIf="!this.api.isLoggedIn()"
+    >
+      Register
+    </a>
+  
+    <a 
+      
+      color="accent" 
+      routerLink="/login"
+      *ngIf="!this.api.isLoggedIn()"
+    >
+      Login
+    </a>
+    
+    <a 
+     
+    color="accent" 
+    routerLink="/profile"
+    *ngIf="this.api.isLoggedIn()"
+  >
+    Profile
+  </a>
+  
+    <a 
+      
+      color="accent" 
+      routerLink="/logout"
+      *ngIf="this.api.isLoggedIn()"
+    >
+      Logout
+    </a>
+  </div>
+  
+</nav>

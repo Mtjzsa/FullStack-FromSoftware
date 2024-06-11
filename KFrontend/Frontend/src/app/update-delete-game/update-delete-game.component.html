@@ -1,0 +1,62 @@
+<div class="form-container">
+  <h1>Update Game</h1>
+
+  <mat-form-field appearance="outline">
+    <mat-label>ID</mat-label>
+    <input matInput
+        disabled
+        [(ngModel)]="this.game.id">
+    <mat-icon matSuffix>text_fields</mat-icon>
+    <mat-hint>ID of the game</mat-hint>
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+      <mat-label>Game Name</mat-label>
+      <input matInput
+          [(ngModel)]="this.game.gameName">
+      <mat-icon matSuffix>text_fields</mat-icon>
+      <mat-hint>Name of the game</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput
+          [(ngModel)]="this.game.gameDescription"></textarea>
+      <mat-icon matSuffix>text_fields</mat-icon>
+      <mat-hint>Description of the game</mat-hint>
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+    <mat-label>Image</mat-label>
+    <input matInput
+        [(ngModel)]="this.game.gameCover">
+    <mat-icon matSuffix>text_fields</mat-icon>
+    <mat-hint>Image of the game</mat-hint>
+  </mat-form-field>
+  
+  <button
+      mat-flat-button
+      color="accent"
+      (click)="updateGame()"
+  >    
+      Update Game
+  </button>
+  
+  <mat-divider></mat-divider>
+  
+  <mat-checkbox
+      [(ngModel)]="this.deleteDisabled"
+  >
+      Delete disabled
+  </mat-checkbox>
+  
+  <button
+      mat-flat-button
+      color="warn"
+      [disabled]="this.deleteDisabled"
+      (click)="deleteGame(this.game.gameName)"
+  >    
+      Delete Game
+  </button>
+
+</div>

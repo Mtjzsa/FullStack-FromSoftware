@@ -1,0 +1,96 @@
+<div class="form-container" [formGroup]="regFormGroup">
+  <h1>Register</h1>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input 
+        matInput
+        formControlName="username"
+        [(ngModel)]="this.registerModel.userName"
+        >
+    <mat-icon matSuffix>text_fields</mat-icon>
+    <mat-hint>Requested username</mat-hint>
+    <div>
+      <small class="error-message">
+          {{errorMsgReg('username')}}
+      </small>
+    </div>
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+    <mat-label>Email address</mat-label>
+    <input
+        matInput
+        formControlName="email"
+        [(ngModel)]="this.registerModel.email"
+        >
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-hint>Your valid and working email address</mat-hint>
+    <div>
+      <small class="error-message">
+          {{errorMsgReg('email')}}
+      </small>
+    </div>
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input 
+        matInput
+        type="password"
+        formControlName="pw"
+        [(ngModel)]="this.registerModel.password">
+    <mat-icon matSuffix>lock</mat-icon>
+    <mat-hint>Requested password</mat-hint>
+    <div>
+      <small class="error-message">
+          {{errorMsgReg('pw')}}
+      </small>
+    </div>
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+    <mat-label>First name</mat-label>
+    <input matInput
+        formControlName="firstName"
+        [(ngModel)]="this.registerModel.firstName">
+    <mat-icon matSuffix>text_fields</mat-icon>
+    <mat-hint>Your first name</mat-hint>
+    <div>
+      <small class="error-message">
+          {{errorMsgReg('firstName')}}
+      </small>
+    </div>
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+    <mat-label>Last name</mat-label>
+    <input matInput
+        formControlName="lastName"
+        [(ngModel)]="this.registerModel.lastName">
+    <mat-icon matSuffix>text_fields</mat-icon>
+    <mat-hint>Your last name</mat-hint>
+    <div>
+      <small class="error-message">
+          {{errorMsgReg('lastName')}}
+      </small>
+    </div>
+  </mat-form-field>
+  
+  <mat-checkbox
+    formControlName="check"
+    [(ngModel)]="this.acceptTermsAndConditions"
+  >
+    Accept terms and conditions
+  </mat-checkbox>
+  
+  <button
+    mat-flat-button
+    color="accent"
+    (click)="sendRegisterCredentials()"
+    [disabled]="!acceptTermsAndConditions"
+  >    
+    Register
+  </button>
+  
+</div>

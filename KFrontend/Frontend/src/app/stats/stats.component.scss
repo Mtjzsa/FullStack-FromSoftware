@@ -1,0 +1,31 @@
+.game-item {
+  margin-bottom: 20px;
+}
+
+.game-name {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'arial-black'
+}
+
+mat-card{
+  margin: 75px 30px;
+}
+
+
+.progress-bar {
+  flex-grow: 1;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.progress-text {
+  font-size: 16px;
+  font-family: 'arial-black'
+}
+
+h1{
+  font-family: 'arial-black';
+  text-align: center;
+  margin-top: 10px;
+}

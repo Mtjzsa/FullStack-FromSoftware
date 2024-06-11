@@ -1,0 +1,42 @@
+<h1>All of the bosses that can be found in the games</h1>
+
+<input type="text" placeholder="Search bosses..." [(ngModel)]="searchTerm" class="search-bar">
+
+<div class="gridDisplay">
+  <mat-card class="example-card" *ngFor="let boss of filteredBosses()">
+  
+    <mat-card-header>
+      <mat-card-title-group>
+        <img mat-card-image [src]="boss.image">
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-title>{{boss.bossName}}</mat-card-title>
+        <mat-card-subtitle>{{boss.location}}</mat-card-subtitle>
+      <p>Souls dropped upon death:  {{boss.souls}}</p>
+      <p>Game: {{ getGame(boss, games) }}</p>
+      <mat-divider></mat-divider>
+      <p class="subject-id">{{boss.id}}</p>
+      <mat-divider></mat-divider>
+      <button
+        mat-stroked-button
+        [routerLink]="['/view-boss/', boss.id]"
+      >
+        <mat-icon arial-hidden="false"  aria-label="View icon" fontIcon="visibility">
+        </mat-icon>
+        View Boss
+      </button>
+
+      <button
+        mat-stroked-button
+        [routerLink]="['/updatedelete-boss/', boss.id]"
+      >
+        <mat-icon arial-hidden="false"  aria-label="Edit icon" fontIcon="edit">
+        </mat-icon>
+        Edit Boss
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div id="clear"></div>

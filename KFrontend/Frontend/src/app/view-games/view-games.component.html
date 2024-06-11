@@ -1,0 +1,30 @@
+<div class="parallax-container">
+  <div class="parallax-image" [style.background-image]="'url(' + game.gameCover + ')'"></div>
+  <div class="parallax-title"><h1>{{this.game.gameName}}</h1></div>
+</div>
+
+<div class="parallax-container">
+  <div class="parallax-image" [style.background-image]="'url(' + game.gameCover + ')'"></div>
+  <div class="parallax-info">
+    <div class="card-container">
+      <div class="card w6">
+        <h2>About {{this.game.gameName}}</h2>
+        <p>{{this.game.gameDescription}}</p>
+      </div>
+      <div class="card w4">
+        <h2>Release Date</h2>
+        <p>This game was release by FromSoftware in the year {{this.game.releaseDate}}</p>
+        <mat-divider></mat-divider>
+        <h2>Current Boss Count</h2>
+        <p>This game has {{this.game.bosses.length}} boses</p>
+        <mat-divider></mat-divider>
+        <div class="functions">
+          <a
+            [routerLink]="['/updatedelete-game/', game.gameName]"
+          >
+            Edit Game</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

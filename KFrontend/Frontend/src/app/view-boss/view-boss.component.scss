@@ -1,0 +1,85 @@
+.profile-card {
+  display: flex;
+  align-items: center;
+  background-color: #686868;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 50vh;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.profile-image {
+  flex: 0 0 300px; /* Set a fixed width for the image container */
+  overflow: hidden;
+}
+
+.profile-image img {
+  width: 100%; /* Make the image fill its container */
+  height: 50vh;
+  display: block;
+  object-fit: cover; /* Ensure the image fills the container without stretching */
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.profile-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'arial-black';
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.social-info {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.social-info span + span {
+  margin-left: 15px;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin: 0;
+}
+#clear{
+  clear: both;
+}

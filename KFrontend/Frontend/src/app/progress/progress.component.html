@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <h3 class="title">Here is all of the bosses that the user has defeated</h3>
+<div class="controls">
+  <select class="dropdown" [(ngModel)]="selectedBoss">
+    <ng-container *ngFor="let game of games">
+      <optgroup [label]="game.gameName">
+        <option *ngFor="let boss of getUndefeatedBossesByGame()[game.gameName]" [value]="boss.bossName">
+          {{ boss.bossName }}
+        </option>
+      </optgroup>
+    </ng-container>
+  </select>
+  <button class="action-button" [disabled]="!selectedBoss" (click)="addDefeatedBosstoUser(this.selectedBoss, this.appUser.userName)">Add to the defeated list</button>
+</div>
+
+
+<div class="big-card" *ngFor="let game of games">
+  <h2 class="game-name">{{ game.gameName }}</h2>
+  <div *ngFor="let boss of getDefeatedBossesForGame(game.id)">
+    <p class="boss-name">{{ boss.bossName }}</p>
+  </div>
+</div>
+</div>

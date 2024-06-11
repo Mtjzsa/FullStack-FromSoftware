@@ -1,0 +1,21 @@
+<h1>Current FromSoftware Games</h1>
+
+
+
+<div class="listCard">
+	<div class="CardContainer" *ngFor="let game of games">
+		<div class="card2">
+			<!-- <a href="/champion/championprofile?id=@item.Id"> -->
+			<h2>{{game.gameName}}</h2>
+			<!-- </a> -->
+			<span>Inspect</span>
+			<div class="pic" [style.background-image]="'url(' + game.gameCover + ')'"></div>
+			<button
+				[routerLink]="['/view-game/', game.gameName]"
+			>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div id="clear"></div>
