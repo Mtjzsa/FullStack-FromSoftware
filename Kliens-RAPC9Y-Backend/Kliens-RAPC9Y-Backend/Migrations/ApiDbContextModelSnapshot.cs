@@ -114,6 +114,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                     b.Property<int>("Defense")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Game_Id")
                         .HasColumnType("int");
 
@@ -140,9 +144,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1d98abe8-067d-40d5-9c6b-3975c3395df2",
+                            Id = "1dc364ac-93ed-427a-a4e4-980f266fd700",
                             BossName = "Margit the Fell Omen",
                             Defense = 103,
+                            Description = "Margit, the Fell Omen is a Great Enemy Boss in Elden Ring. This is an optional boss as players don't need to defeat him to advance in Elden Ring, though they do need to defeat Margit to advance to Stormveil Castle.\r\n\r\nMargit, the Fell Omen is found in Stormhill when players attempt to approach Stormveil Castle. A non-boss variant can be found later again when approaching a stationary enemy slightly southwest of the Outer Wall Battleground Site of Grace in the Capital Outskirts. Margit stands in the Tarnished's way to prevent them from approaching the Elden Ring, though his motivations are only explained in a later encounter.",
                             Game_Id = 1,
                             Hp = 4074,
                             Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/margit-1-boss-elden-ring-wiki.jpg",
@@ -151,9 +156,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "dbe98d21-8266-4a1d-b8c3-d79a0bdc3f12",
+                            Id = "ec80a176-2468-4281-b69d-c7a2a183e8c8",
                             BossName = "Godrick the Grafted",
                             Defense = 105,
+                            Description = "Godrick the Grafted, also known as Godrick the Golden, is a Demigod Boss in Elden Ring. This Elden Ring Godrick the Grafted Guide features boss locations, tips, strategies and videos on how to defeat Godrick easily, as well as boss stats and lore for Godrick. Bosses are unique and challenging Enemies that can be encountered all over the Lands Between. Shardbearers drop their own unique Great Rune and Remembrance capable of being transformed into powerful Weapons, Spells, Ashes of War, and Talismans for the player.\r\n\r\nGodrick the Grafted is the ruler of Stormveil Castle, and is one of the first demigods and shardbearers that players can fight. He is a descendant of Godfrey and thus born of the golden lineage, but Gideon and Kenneth Haight believe him to be weak and unworthy to rule. Much of Godrick's power comes from the arms and legs of soldiers he's grafted onto himself, and especially the dragon head grafted onto his left arm during the second phase of his fight. His knights and soldiers wear armor that bears emblems of the golden lineage: a two-headed war-axe and the beast regent, Serosh.\r\n\r\nGodrick is an optional boss, and doesn't need to be defeated in order to advance in Elden Ring. You can advance to Liurnia of the Lakes without defeating him by following the path north from Stormhill Shack, then dropping down to the west from the broken bridge and walking along the outside of the castle. However, Godrick is a shardbearer, and two of the five available shardbearers must be defeated before entering Leyndell, Royal Capital.",
                             Game_Id = 1,
                             Hp = 6080,
                             Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/godrick_the_grafted_bosses_elden_ring_wiki_600px1-min.jpg",
@@ -162,9 +168,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "d0bf53bf-eea8-4981-96fe-19e0f6993485",
+                            Id = "4dd89182-a043-4414-a6f9-79466cbb3010",
                             BossName = "Red Wolf of Radagon",
                             Defense = 107,
+                            Description = "Red Wolf of Radagon is a Great Enemy Boss in Elden Ring. This giant red wolf wields sorceries and guards the found in the Grand Library of Raya Lucaria Academy. This is an optional boss as players don't need to defeat it to advance in Elden Ring, though they do need to defeat it to advance further in Raya Lucaria Academy and to achieve a certain ending.\r\n\r\nLesser Red Wolf of Radagon is the normal enemy form of this boss. Red Wolf of the Champion is another variant of this boss.",
                             Game_Id = 1,
                             Hp = 2204,
                             Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/red-wolf-of-radagon-2-elden-ring-wiki-guide.jpg",
@@ -173,9 +180,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "18ad68da-9304-4feb-ac11-6047d65c4e0d",
+                            Id = "9db4bdfb-81cf-42c2-a6e8-f190a2daa169",
                             BossName = "Rennala, Queen of the Full Moon",
                             Defense = 109,
+                            Description = "Rennala, Queen of the Full Moon is a Legend Boss in Elden Ring. Though not a demigod, Rennala is one of the shardbearers who resides in the Academy of Raya Lucaria. Rennala is a powerful sorceress, head of the Carian Royal family, and erstwhile leader of the Academy. Rennala is an optional boss, and doesn't need to be defeated in order to advance in Elden Ring. However, she is a shardbearer, and two of the five available shardbearers must be defeated before entering Leyndell, Royal Capital. In addition, she must be defeated to achieve a certain ending.\r\n\r\nOnce defeated, Rennala becomes a friendly NPC who can be used to reassign your character's stats.",
                             Game_Id = 1,
                             Hp = 40000,
                             Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/rennala_queen_of_the_full_moon_bosses_elden_ring_wiki_600px1-min.jpg",
@@ -184,9 +192,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "b61c1f05-d89c-43d4-ae69-6e5d0fa00f0c",
+                            Id = "48347cc4-3aff-4fe3-a878-276c8d4bb193",
                             BossName = "Leonine Misbegotten",
                             Defense = 104,
+                            Description = "Leonine Misbegotten is a Great Enemy Boss in Elden Ring. This Elden Ring Leonine Misbegotten Guide features boss locations, tips, strategies and videos on how to defeat the Leonine Misbegotten, as well as boss stats and lore.\r\n\r\nThis misbegotten is a feral humanoid with bestial features and a thick, crimson mane. It wields a large greatsword and is found at the end of Castle Morne. This individual has stolen the treasured sword of Castle Morne, the one Edgar promised to protect. He is summonable for this fight if his and Irina's questline have been progressed to a certain point.\r\n\r\nThis is an optional boss as players are not required to defeat it to advance. The Leonine Misbegotten is extremely aggressive and it may be difficult to find openings to attack it. You will find yourself rolling most of the time in order to create distance as a ranged character, or as an alternative to Guarding as blocking it's attacks will deplete your Stamina quickly. It drops the Grafted Blade Greatsword when defeated.\r\n\r\nBosses are unique and challenging Enemies that can be encountered all over the Lands Between. Great Enemy bosses can drop unique Spirit Ashes, Weapons, Spells, and other various Items.\r\n\r\nLesser Misbegotten Warrior is the normal enemy form of this boss. Other variants of this boss appear in the Crucible Knight and Misbegotten Warrior, Perfumer Tricia and Misbegotten Warrior, and Misbegotten Crusader boss fights.",
                             Game_Id = 1,
                             Hp = 2198,
                             Image = "https://eldenring.wiki.fextralife.com/file/Elden-Ring/leonine_misbegotten_bosses_elden_ring_wiki_600px1.jpg",
@@ -195,9 +204,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "04f1d6de-e104-4c37-8e41-eecaff30bf42",
+                            Id = "d75fcdc2-09b1-4559-b6a9-74145adae7b4",
                             BossName = "Father Gascoigne",
                             Defense = 95,
+                            Description = "Father Gascoigne (ガスコイン神父 Gasukoin shinpu lit. Father Gascoigne) is a Boss in Bloodborne; he can also be summoned beforehand for a certain boss fight.",
                             Game_Id = 2,
                             Hp = 2031,
                             Image = "https://bloodborne.wiki.fextralife.com/file/Bloodborne/father_gascoigne_boss.jpg",
@@ -206,9 +216,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "ef62f043-14c6-4140-bc24-89161461a63c",
+                            Id = "84b4b118-17ed-46bb-b4c6-d22ec61a7e90",
                             BossName = "Gehrman, The First Hunter",
                             Defense = 150,
+                            Description = "Gehrman, the First Hunter (最初の狩人ゲールマン Saisho no kariudo Gēruman lit. \"Gehrman, the First Hunter\") is a Boss in Bloodborne, and one of the three possible final bosses of the game.",
                             Game_Id = 2,
                             Hp = 14293,
                             Image = "https://bloodborne.wiki.fextralife.com/file/Bloodborne/gehrman_boss.jpg",
@@ -217,9 +228,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "21fa331b-5954-41fb-b562-27730cb1274b",
+                            Id = "01dc0882-942d-42cd-aad4-e95aec1855b0",
                             BossName = "Gwyn, Lord of Cinder",
                             Defense = 120,
+                            Description = "Gwyn, Lord of Cinder was a mighty warrior and the greatest of lords. He was known as the Lord of Sunlight and headed the efforts to end the Age of Ancients, together with Gravelord Nito, the Witch of Izalith, and the dragon-traitor, Seath the Scaleless. Commanding his knights, he led the Lords to victory and oversaw the Age of Fire. Despite being partially bequeathed to the Four Kings and Seath the Scaleless, his soul remains a powerful thing indeed.\r\n\r\nAround a thousand years prior to the start of the Dark Souls game events, Gwyn sacrificed himself to link the First Flame. His reasons for doing so are disputed, but what is certain is that his principal motivation was to postpone the end of the Age of Fire. He was succeeded by his children: his firstborn, the banished God of War who lost his status as a deity; his daughter Gwynevere, the Queen of Sunlight; and his lastborn Gwyndolin, his \"repulsive [and] frail\" son who Gwyn raised as a daughter due to Gwyndolin's affinity for the Moon.\r\n\r\nIt will come as no surprise to anyone who has spoken to Kingseeker Frampt, Darkstalker Kaathe, or the illusion of Gwynevere, that Lord Gwyn is the final boss of the game, and that it is the Chosen Undead's goal to either succeed him and end further Undead sacrifices, or start the Age of Dark: the apparent age of Humanity. Lord Gwyn can be fought after acquiring all Lord Souls and Lord Soul Shards and returning them to the Lordvessel at Firelink Altar, which will grant access to the Kiln of the First Flame. After fighting past five of his Black Knight, a Hollowed and haggard Gwyn awaits at the site of the First Flame, presenting himself as the final challenge.",
                             Game_Id = 3,
                             Hp = 4250,
                             Image = "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0024_Gwyn%20Lord%20of%20Cinder.jpg",
@@ -228,9 +240,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "8ec60d2a-946d-4d22-971e-a9fc423e7342",
+                            Id = "e72d453d-108a-4b2d-ac30-44122f4952ab",
                             BossName = "Ornstein",
                             Defense = 100,
+                            Description = "Ornstein is the captain of the Four Knights of Gwyn Lord of Cinder, serving alongside Artorias the Abysswalker, Lord's Blade Ciaran, and Hawkeye Gough. As his name would suggest, he was an honorary dragon slayer.\r\n\r\nHe wields his Dragonslayer Spear, a sword-spear after the fashion of Gwyn's Firstborn's own weapon. He also commands the power of lightning. It is believed that he was left behind with Smough to guard Anor Londo's cathedral after the gods fled.\r\n\r\nHowever, there is reason to believe that Ornstein's presence in Anor Londo is an illusion, much as Gwynevere and the light of Anor Londo is a mere facade maintained by Gwyndolin. This is evidenced by his presence in Drangleic, at Heide's Tower of Flame, where we can speculate he might have fled with Gwynevere. There is also the matter of his armour being present in Archdragon Peak, suggesting he followed Gwyn's Firstborn after his betrayal, with some suggesting he even shed his armour and body to become a dragon – not least as the Nameless King echoes the Ornstein and Smough boss fight in absorbing the lightning of his stormdrake, The King of Storm.",
                             Game_Id = 3,
                             Hp = 1642,
                             Image = "https://darksouls.wiki.fextralife.com/file/Dark-Souls/tumblr_lxlmomDlzY1qgjlhf.jpg",
@@ -239,9 +252,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "92347543-2a10-40a1-8b0f-850d39fd20c0",
+                            Id = "f38e92cc-002c-49f1-bd4c-7a7964ca4c4e",
                             BossName = "Nashandra",
                             Defense = 135,
+                            Description = "Nashandra is a Boss and NPC in Dark Souls 2 (DKS2). Nashandra, equipped with a scythe and proficient in the arts of dark magic, poses a formidable challenge to the player. Her attacks carry significant lethality, capable of delivering fatal blows with a single strike. Additionally, she summons wisps akin to the Cursed Vessel encountered in the Shaded Woods, albeit swifter and possessing the ability to inflict direct damage. These wisps can be eliminated using any form of attack. Bosses are unique and challenging Enemies that drop Boss Souls capable of being transformed into powerful Weapons, Spells, and Items for the player.",
                             Game_Id = 4,
                             Hp = 8770,
                             Image = "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/nashandra.png",
@@ -250,9 +264,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "82f0b6a9-e802-407e-8c04-5e1933d8cfea",
+                            Id = "54c0d216-5760-4247-9f11-18f048055b87",
                             BossName = "The Pursuer",
                             Defense = 123,
+                            Description = "The Pursuer is a boss in Dark Souls 2. A giant, aggressive knight that relentlessly \"pursues\" the player. Heavily armored in black, it wields the Pursuer's Ultra Greatsword with a corresponding heavy hitter moveset. He can move very quickly for such a large enemy, and can, in particular, close rapidly on the player from a distance.\r\n\r\nCan be encountered in multiple locations as a miniboss if playing SotFS. After the main boss fight in Forest of Fallen Giants, these secondary encounters are not explicit boss fights and do not grant as many souls as the first encounter. In addition, it will already be in it's powered-up curse mode, allowing it to use its powerful Dark Magic attack. These versions generally drop 1 Twinkling Titanite, and will vanish into the ground if you leave the area they spawned in. In NG+, the Pursuer will appear more regularly.",
                             Game_Id = 4,
                             Hp = 3500,
                             Image = "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/pursuer.png",
@@ -261,9 +276,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "b7ba2f00-749b-4189-8209-f9b21b3993ff",
+                            Id = "fac46ad2-0298-47e3-a1aa-c17ca7fe5292",
                             BossName = "Soul of Cinder",
                             Defense = 150,
+                            Description = "Soul of Cinder is a Boss and is the Final Boss of Dark Souls 3. This Dark Souls 3 Soul of Cinder Guide features locations, strategies and videos on how to defeat the Soul of Cinder easily, as well as tips, weaknesses, trivia and lore notes for the Soul of Cinder boss.\r\n\r\nThe Soul of Cinder is seen as the amalgamation of all the Lords of Cinder, with a variety of Dark Dialectics spells and movesets used during its first phase and the use of Gwyn's moveset for the second phase. It appears to the player as a heavily armored knight and wields the Firelink Greatsword in battle, a greatsword that can change into one of three other forms during the first phase of the fight. After depleting it's health once, the second phase starts, where the boss regains all his health and sticks to one moveset.\r\n\r\nThis boss fight can be difficult due to the unpredictability of its moves in the first phase. This guide aims to not only inform players of its moveset in all weapon forms, but also how to best deal with them. Two NPCs can be summoned to aid you in the fight against the Soul of Cinder:\r\n\r\nYuria of Londor - Must have done Anri's event in Darkmoon tomb and Yuria must not be hostile. Summon sign can be found just before the boss fog.\r\nLondor Pale Shade - Summon can be found at mid way up the long winding stairs to the boss arena, turn to your right look for the white sign. Only available if allied with Yuria.\r\nThis boss is not optional and is required to finish the game. For endings after defeating it, see the Game Progress Route and/or Kiln of the First Flame.\r\n\r\nBosses are unique and challenging Enemies that drop Boss Souls capable of being transformed into powerful Weapons, Spells, and Items for the player.",
                             Game_Id = 5,
                             Hp = 10766,
                             Image = "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/tumblr_o25lubbSXv1qzwtdlo1_1280.jpg",
@@ -272,9 +288,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "58bdbf8d-934b-4a73-b3ab-cb7f46ef4c34",
+                            Id = "d8f80d65-1174-45e2-badb-4907c6058cba",
                             BossName = "Pontiff Sulyvahn",
                             Defense = 107,
+                            Description = "Pontiff Sulyvahn is a Boss in Dark Souls 3. This Dark Souls 3 Pontiff Sulyvahn Guide features locations, strategies and videos on how to defeat Pontiff Sulyvahn easily, as well as tips, weaknesses, trivia and lore notes for the Pontiff Sulyvahn boss.\r\n\r\nPontiff Sulyvahn is a tall humanoid dressed in bejeweled sorcerer's robes. He wields two greatswords in combat - the greatsword in his left hand emanating a purple aura and the greatsword in his right hand enshrouded in flames. After being brought down to a certain health threshold, branch-like wings sprout from his back.\r\n\r\nDuring combat, the boss attacks players in an aggressively using long sword combos, adding to the difficulty of the fight. This boss is not optional and must be killed for access to part of Irithyll. Three NPCs can be summoned to help you in the fight against Pointiff Sulyvahn:\r\n\r\nBlack Hand Gotthard - in front of Sulyvahn's gate, summoning him will grant the \"By My Sword\" gesture.\r\nLondor Pale Shade - can be summoned in front of a statue to the right when facing the boss fog, as long as the player has been following Yuria's and Yoel's questline, and gives the \"Duel Bow Gesture\" when summoned.\r\nAnri of Astora - Their sign will be to the right (facing away from the fog door) in front of a statue. A seriously powerful summon for this fight, Anri is capable of nearly soloing Sulyvahn, as they’re capable of parrying him.\r\nBosses are unique and challenging Enemies that drop Boss Souls capable of being transformed into powerful Weapons, Spells, and Items for the player.",
                             Game_Id = 5,
                             Hp = 5106,
                             Image = "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/pontiff_sulyvahn_trophy.PNG",
@@ -283,9 +300,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "c7145a87-1260-4ef1-a9a1-7e31a93aca74",
+                            Id = "67830080-e800-4bf7-9297-43f6f580b41f",
                             BossName = "Isshin, the Sword Saint",
                             Defense = 700,
+                            Description = "Isshin, The Sword Saint (剣聖、葦名一心; Kensei Ashina Isshin; Sword Saint, Isshin Ashina) is the final Boss in Sekiro: Shadows Die Twice. This Complete Isshin, The Sword Saint Boss Guide gives you strategies on how to beat Isshin easily, as well as tips, tricks and lore notes. Bosses like The Sword Saint are special, dangerous Enemies that feature a special display on-screen when defeated, such as \"Immortality Severed\" or \"Shinobi Execution\". You will need to perform multiple Deathblows on them in order to defeat them, and filling their Posture Gauge is the fastest way to accomplish this. However, decreasing their health will make it so their Posture Gauge depletes more quickly, assisting you in accomplishing this feat.",
                             Game_Id = 6,
                             Hp = 10000,
                             Image = "https://sekiroshadowsdietwice.wiki.fextralife.com/file/Sekiro-Shadows-Die-Twice/isshin-sword-saint-boss-sekiro-wiki-guide-300px.png",
@@ -294,9 +312,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         },
                         new
                         {
-                            Id = "ec1de4a3-39e8-4bd7-8f51-cbc167945cb7",
+                            Id = "426a47fd-a2a5-44b4-877a-e066c08d7590",
                             BossName = "Genichiro Ashina",
                             Defense = 600,
+                            Description = "\r\nGenichiro Ashina\r\ngenichiro ashina sekiro shadows die twice wiki guide\r\nLocation	Ashina Reservoir\r\nAshina Castle\r\nStatus Abnormalities	Shock\r\nUseful Tools	Shinobi Firecracker\r\nLoaded Axe\r\nReward	Memory: Genichiro\r\nBloodsmoke Ninjutsu\r\n\r\nXP	NG: 2000\r\nNG+: 18000\r\nNG++: 27000\r\nGenichiro Ashina (葦名弦一郎, Ashina Genichirou) is a Boss in Sekiro: Shadows Die Twice. This Complete Genichiro Ashina Boss Guide gives you strategies on how to beat Genichiro easily, as well as tips, tricks and lore notes. Bosses like Genichiro are special, dangerous Enemies that feature a special display on-screen when defeated, such as \"Immortality Severed\" or \"Shinobi Execution\". You will need to perform multiple Deathblows on them in order to defeat them, and filling their Posture Gauge is the only way to accomplish this. However, decreasing their health will make it so their Posture Gauge depletes more slowly, assisting you in accomplishing this feat. ",
                             Game_Id = 6,
                             Hp = 10000,
                             Image = "https://sekiroshadowsdietwice.wiki.fextralife.com/file/Sekiro-Shadows-Die-Twice/genichiro-ashina-boss-sekiro-wiki-guide-300px.png",
@@ -317,6 +336,10 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("GameDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("GameName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -333,6 +356,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         {
                             Id = 1,
                             GameCover = "https://media.fromsoftware.jp/fromsoftware/ww/static/img/products/title_img/high/img_titlearchive_105.jpg",
+                            GameDescription = "Elden Ring is an upcoming action role-playing game developed by FromSoftware in collaboration with acclaimed author George R.R. Martin. Set in a vast and fantastical world known as the Lands Between, Elden Ring promises to deliver the signature challenging gameplay and rich storytelling that FromSoftware is known for. Players will embark on an epic journey as they explore diverse landscapes, encounter formidable foes, and uncover the mysteries of the shattered Elden Ring. With its expansive open-world environment, deep lore, and dynamic combat system, Elden Ring is poised to offer an immersive and unforgettable experience for fans of the genre and newcomers alike.",
                             GameName = "Elden Ring",
                             ReleaseDate = 2022
                         },
@@ -340,6 +364,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         {
                             Id = 2,
                             GameCover = "https://media.fromsoftware.jp/fromsoftware/ww/static/img/products/title_img/high/img_titlearchive_94.jpg",
+                            GameDescription = "Bloodborne is an atmospheric action role-playing game set in a gothic, horror-infused world. Players take on the role of a Hunter in the city of Yharnam, plagued by a mysterious blood-borne illness. As they explore the twisted streets and eerie landscapes, they encounter grotesque creatures, challenging enemies, and eldritch horrors lurking in the shadows. The game's fast-paced combat requires precise timing and strategic thinking, rewarding players for their skill and adaptability. With its haunting atmosphere, intricate level design, and deep lore, Bloodborne offers a gripping and immersive experience that will test players' courage and determination as they uncover the dark secrets of Yharnam.",
                             GameName = "Bloodborne",
                             ReleaseDate = 2015
                         },
@@ -347,6 +372,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         {
                             Id = 3,
                             GameCover = "https://media.fromsoftware.jp/fromsoftware/ww/static/img/products/title_img/high/img_titlearchive_86.jpg",
+                            GameDescription = "Dark Souls is a challenging action role-playing game known for its unforgiving difficulty and intricate world design. Players navigate a dark and atmospheric fantasy realm filled with perilous enemies, intricate level layouts, and mysterious lore. As they journey through the game, they encounter epic battles, daunting bosses, and deep exploration, all set against a backdrop of despair and decay. Dark Souls emphasizes player skill and strategic thinking, rewarding perseverance and careful observation as players uncover the secrets of its haunting world.",
                             GameName = "Dark Souls",
                             ReleaseDate = 2011
                         },
@@ -354,6 +380,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         {
                             Id = 4,
                             GameCover = "https://media.fromsoftware.jp/fromsoftware/ww/static/img/products/title_img/high/img_titlearchive_92.jpg",
+                            GameDescription = "Dark Souls 2 is the sequel to the acclaimed action role-playing game, continuing the series' tradition of challenging gameplay and atmospheric world-building. Set in a new realm known as Drangleic, players embark on a journey filled with treacherous enemies, intricate level design, and deep lore. Like its predecessor, Dark Souls 2 tests players' skills through demanding combat encounters and formidable bosses. The game expands upon the series' signature mechanics while introducing new gameplay elements and a diverse range of environments to explore. Dark Souls 2 offers a compelling and immersive experience for players seeking a test of their courage and perseverance.",
                             GameName = "Dark Souls II",
                             ReleaseDate = 2014
                         },
@@ -361,6 +388,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         {
                             Id = 5,
                             GameCover = "https://media.fromsoftware.jp/fromsoftware/ww/static/img/products/title_img/high/img_titlearchive_97.jpg",
+                            GameDescription = "Dark Souls 3 is the culmination of the acclaimed action role-playing series, offering a challenging and immersive experience for players. Set in a dying world on the brink of apocalypse, players journey through a dark and atmospheric realm filled with menacing enemies, intricate level design, and rich lore. The game features intense combat encounters, epic boss battles, and deep exploration as players uncover the secrets of the world and confront their own mortality. With refined gameplay mechanics, stunning visuals, and a haunting soundtrack, Dark Souls 3 delivers a gripping and unforgettable journey for those brave enough to face its trials.",
                             GameName = "Dark Souls III",
                             ReleaseDate = 2016
                         },
@@ -368,6 +396,7 @@ namespace Kliens_RAPC9Y_Backend.Migrations
                         {
                             Id = 6,
                             GameCover = "https://media.fromsoftware.jp/fromsoftware/ww/static/img/products/title_img/high/img_titlearchive_102.jpg",
+                            GameDescription = "In Sekiro: Shadows Die Twice you are the \"one-armed wolf\", a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan. When the young lord is captured, nothing will stop you on a perilous quest to regain your honor, not even death itself. ",
                             GameName = "Sekiro: Shadows Die Twice",
                             ReleaseDate = 2019
                         });

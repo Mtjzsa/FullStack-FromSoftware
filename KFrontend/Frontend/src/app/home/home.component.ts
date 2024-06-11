@@ -17,20 +17,22 @@ export class HomeComponent implements OnInit{
     this.games = []
   }
   
+  
   ngOnInit(): void {
     this.http.get<Array<Game>>('http://localhost:5146/Game')
     .subscribe(resp => {
-      resp.map(x=>{
+      resp.slice(-6).map(x=>{
         let s = new Game()
         s.id = x.id
         s.gameName = x.gameName
         s.gameCover = x.gameCover
         s.releaseDate = x.releaseDate
         s.bosses = x.bosses
+        s.gameDescription = x.gameDescription
         this.games.push(s)
       })
       console.log(this.games)
-    })
+    })  
   }  
 
   moveSlider(direction: string) {
@@ -40,10 +42,6 @@ export class HomeComponent implements OnInit{
         this.games.unshift(lastItem);
       }
     }
-  }
-
-  readMore(item: Game) {
-    console.log("Read more clicked for item:", item);
   }
 }
 

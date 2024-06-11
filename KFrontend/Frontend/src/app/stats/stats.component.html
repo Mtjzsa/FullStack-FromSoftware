@@ -1,0 +1,15 @@
+<h1>
+  Each game with how many bosses they currently have
+</h1>
+
+<mat-card>
+  <mat-card-content>
+    <div *ngFor="let game of games" class="game-item">
+      <div class="game-name">{{ game.gameName }}</div>
+      <div>
+        <mat-progress-bar class="progress-bar" mode="determinate" [value]="game.bosses.length"></mat-progress-bar>
+        <div class="progress-text">{{ game.bosses.length }} Bosses</div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

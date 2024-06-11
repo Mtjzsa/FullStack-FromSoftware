@@ -1,0 +1,20 @@
+<h3>All Undefeated Bosses</h3>
+<select>
+  <ng-container *ngFor="let game of games">
+    <optgroup [label]="game.gameName">
+      <option *ngFor="let boss of getUndefeatedBossesByGame()[game.gameName]" [value]="boss.bossName">
+        {{ boss.bossName }}
+      </option>
+    </optgroup>
+  </ng-container>
+</select>
+
+
+<div *ngFor="let game of games">
+  <h2>{{ game.gameName }}</h2>
+  <div *ngFor="let boss of getDefeatedBossesForGame(game.id)">
+    <p>{{ boss.bossName }}</p>
+  </div>
+
+  
+</div>

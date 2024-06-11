@@ -51,7 +51,7 @@ public sendLoginCredentials() : void{
     },
     (error)=>{
       // console.log(error)
-      this.snackBar.open(error.message, 'Close', {duration : 5000})
+      this.snackBar.open('Login failed: Username not found/wrong', 'Close', {duration : 5000})
     }
   )
   
