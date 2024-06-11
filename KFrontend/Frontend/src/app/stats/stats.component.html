@@ -1,1 +1,9 @@
-<p>stats works!</p>
+<mat-card>
+  <mat-card-content>
+    <div *ngFor="let game of games">
+      <div>{{ game.gameName }}</div>
+      <div>{{ game.bosses.length }}</div>
+      <mat-progress-bar mode="determinate" [value]="game.bosses.length"></mat-progress-bar>
+    </div>
+  </mat-card-content>
+</mat-card>

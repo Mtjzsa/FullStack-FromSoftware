@@ -16,6 +16,13 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ViewBossComponent } from './view-boss/view-boss.component';
 import { ViewGamesComponent } from './view-games/view-games.component';
 import { CreateBossComponent } from './create-boss/create-boss.component';
+import { CreateGameComponent } from './create-game/create-game.component';
+import { UpdateDeleteBossComponent } from './update-delete-boss/update-delete-boss.component';
+import { UpdateDeleteGameComponent } from './update-delete-game/update-delete-game.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProgressComponent } from './progress/progress.component';
+import { StatsComponent } from './stats/stats.component';
+import { NgChartsModule } from 'ng2-charts';
 
 //form
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -32,13 +39,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSelectModule} from '@angular/material/select';
-import { CreateGameComponent } from './create-game/create-game.component';
-import { UpdateDeleteBossComponent } from './update-delete-boss/update-delete-boss.component';
-import { UpdateDeleteGameComponent } from './update-delete-game/update-delete-game.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ProgressComponent } from './progress/progress.component';
-import { StatsComponent } from './stats/stats.component';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -79,7 +84,12 @@ import { StatsComponent } from './stats/stats.component';
     MatInputModule,
     MatCheckboxModule,
     MatSelectModule,
-    
+    NgChartsModule,
+    MatToolbarModule,
+    MatListModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
