@@ -37,6 +37,7 @@ import { UpdateDeleteBossComponent } from './update-delete-boss/update-delete-bo
 import { UpdateDeleteGameComponent } from './update-delete-game/update-delete-game.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProgressComponent } from './progress/progress.component';
+import { StatsComponent } from './stats/stats.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { ProgressComponent } from './progress/progress.component';
     UpdateDeleteBossComponent,
     UpdateDeleteGameComponent,
     ProfileComponent,
-    ProgressComponent
+    ProgressComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
