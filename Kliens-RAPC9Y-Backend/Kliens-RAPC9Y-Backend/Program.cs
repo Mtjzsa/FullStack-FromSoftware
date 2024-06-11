@@ -1,3 +1,4 @@
+using Kliens_RAPC9Y_Backend;
 using Kliens_RAPC9Y_Backend.Data;
 using Kliens_RAPC9Y_Backend.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -54,12 +55,13 @@ builder.Services.AddCors(options =>
         {
             policy.WithOrigins("http://localhost:4200")
             .AllowAnyHeader()
-            .AllowAnyMethod();
+            .AllowAnyMethod()
+            .AllowCredentials();
         });
 });
 
 
-
+builder.Services.AddSignalR();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -75,7 +77,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.MapHub<NotificationHub>("/notificationHub");
 
 
 app.MapControllers();

@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Boss } from '../_models/boss';
 import { Game } from '../_models/game';
+import { SingalrserviceComponent } from '../singalrservice/singalrservice.component';
 
 @Component({
   selector: 'app-progress',
@@ -20,8 +21,9 @@ export class ProgressComponent {
   defeated : Array<Boss>
   bosses : Array<Boss>
   games : Array<Game>
+  selectedBoss: string;
 
-  constructor(http: HttpClient, route: ActivatedRoute, snackBar: MatSnackBar, router: Router) {
+  constructor(http: HttpClient, route: ActivatedRoute, snackBar: MatSnackBar, router: Router,  private SignalRService : SingalrserviceComponent) {
     this.http = http
     this.appUser = new AppUser
     this.route = route
@@ -30,6 +32,7 @@ export class ProgressComponent {
     this.defeated = []
     this.bosses = []
     this.games = []
+    this.selectedBoss = ""
   }
 
   ngOnInit(): void {
@@ -78,6 +81,12 @@ export class ProgressComponent {
       })
     })
 
+    this.SignalRService.addDefeatedBoss$.subscribe((bossName)=>{
+      if (bossName){
+        console.log(bossName)
+        this.appUser.defeatedBosses = bossName
+      }
+    })
     
   }
 
@@ -98,8 +107,33 @@ export class ProgressComponent {
     return bossesByGame;
   }
 
-  public addDefeatedBosstoUser(){
+  public addDefeatedBosstoUser(bossName : string, username : string) : void{
+    // if (this.selectedBoss){
+    // }
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + localStorage.getItem('nikprog-practiceapi-token')
+    })
+      console.log(this.selectedBoss)
+      console.log(localStorage.getItem('nikprog-practiceapi-token'))
+      this.http
+      .post(
+        'http://localhost:5146/Boss/'+ username+'/' + bossName,
+        { headers: headers }
+      )
+      .subscribe(
+        (success) => {
+          this.snackbar.open('Boss succesfully added to your list!', 'Close', { duration: 5000 })
+          //this.router.navigate(['/progress'])
+          this.appUser.defeatedBosses += `;${bossName}`
+          this.selectedBoss = "";
 
+        },
+        (error) => {
+          this.snackbar.open('Error occured, please try again.', 'Close', { duration: 5000 })
+        }
+      )
+    
   }
 
 

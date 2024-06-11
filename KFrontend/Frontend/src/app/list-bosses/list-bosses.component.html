@@ -20,7 +20,7 @@
       <mat-divider></mat-divider>
       <button
         mat-stroked-button
-        [routerLink]="['/view-boss/', boss.bossName]"
+        [routerLink]="['/view-boss/', boss.id]"
       >
         <mat-icon arial-hidden="false"  aria-label="View icon" fontIcon="visibility">
         </mat-icon>
@@ -29,7 +29,7 @@
 
       <button
         mat-stroked-button
-        [routerLink]="['/updatedelete-boss/', boss.bossName]"
+        [routerLink]="['/updatedelete-boss/', boss.id]"
       >
         <mat-icon arial-hidden="false"  aria-label="Edit icon" fontIcon="edit">
         </mat-icon>

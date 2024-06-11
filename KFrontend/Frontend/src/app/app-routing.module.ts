@@ -25,10 +25,10 @@ const routes: Routes = [
   { path: 'list-bosses', component: ListBossesComponent},
   { path: 'list-games', component: ListGamesComponent},
 
-  {path: "view-boss/:bossName", component: ViewBossComponent, canActivate: [ApiService]},
+  {path: "view-boss/:id", component: ViewBossComponent, canActivate: [ApiService]},
   {path: "view-game/:gameName", component: ViewGamesComponent, canActivate: [ApiService]},
 
-  {path: "updatedelete-boss/:bossName", component: UpdateDeleteBossComponent, canActivate: [ApiService]},
+  {path: "updatedelete-boss/:id", component: UpdateDeleteBossComponent, canActivate: [ApiService]},
   {path: "updatedelete-game/:gameName", component: UpdateDeleteGameComponent, canActivate: [ApiService]},
 
   {path: "create-boss", component: CreateBossComponent, canActivate: [ApiService]},

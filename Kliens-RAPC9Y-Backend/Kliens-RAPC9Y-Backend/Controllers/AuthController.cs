@@ -42,7 +42,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
                 var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("nagyonhosszutitkoskodhelye"));
                 var token = new JwtSecurityToken(
                  issuer: "http://www.security.org", audience: "http://www.security.org",
-                 claims: claim, expires: DateTime.Now.AddMinutes(60),
+                 claims: claim, expires: DateTime.Now.AddMinutes(6000),
                  signingCredentials: new SigningCredentials(signinKey, SecurityAlgorithms.HmacSha256)
                 );
                 return Ok(new
