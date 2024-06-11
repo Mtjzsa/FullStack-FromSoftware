@@ -1,5 +1,25 @@
-<p>{{this.boss.bossName}}</p>
-<p>{{this.boss.hp}}</p>
-<p>{{this.boss.id}}</p>
-<p>{{this.boss.souls}}</p>
-<p>{{this.boss.description}}</p>
+<div class="wrapper">
+  <div class="profile-card">
+    <div class="profile-image">
+      <img src="{{this.boss.image}}" alt="{{this.boss.bossName}}">
+    </div>
+    <div class="profile-content">
+      <h1>
+          {{this.boss.bossName}} 
+          <button mat-raised-button>
+            Update
+          </button>
+      </h1>
+      <h3>{{this.boss.id}}</h3>
+      <h2>{{ getGame(boss, games) }}</h2>
+      <div class="social-info">
+        <span>Location: {{this.boss.location}}</span>
+        <span>Hp: {{this.boss.hp}}</span>
+        <span>Defense: {{this.boss.defense}}</span>
+        <span>Souls dropped: {{this.boss.souls}}</span>
+      </div>
+      <p>{{this.boss.description}}</p>
+    </div>
+  </div>
+</div>
+<div id="clear"></div>
