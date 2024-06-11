@@ -3,6 +3,7 @@ using Kliens_RAPC9Y_Backend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 
 namespace Kliens_RAPC9Y_Backend.Controllers
 {
@@ -11,10 +12,12 @@ namespace Kliens_RAPC9Y_Backend.Controllers
     public class GameController : ControllerBase
     {
         ApiDbContext ctx;
+        private readonly IHubContext<NotificationHub> _hubContext;
 
-        public GameController(ApiDbContext ctx)
+        public GameController(ApiDbContext ctx, IHubContext<NotificationHub> hubContext)
         {
             this.ctx = ctx;
+            _hubContext = hubContext;
         }
 
         [HttpGet]

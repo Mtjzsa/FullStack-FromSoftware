@@ -30,7 +30,7 @@ export class ViewBossComponent implements OnInit{
   }
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
-      let bossName = param['bossName']
+      let bossName = param['id']
       let headers = new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + localStorage.getItem('nikprog-practiceapi-token')

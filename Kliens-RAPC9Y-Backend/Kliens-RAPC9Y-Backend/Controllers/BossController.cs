@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 
 namespace Kliens_RAPC9Y_Backend.Controllers
 {
@@ -14,11 +15,13 @@ namespace Kliens_RAPC9Y_Backend.Controllers
     {
         private ApiDbContext ctx;
         private readonly UserManager<AppUser> _userManager;
+        private readonly IHubContext<NotificationHub> _hubContext;
 
-        public BossController(ApiDbContext ctx, UserManager<AppUser> userManager)
+        public BossController(ApiDbContext ctx, UserManager<AppUser> userManager, IHubContext<NotificationHub> hubContext)
         {
             this.ctx = ctx;
             _userManager = userManager;
+            _hubContext = hubContext;
         }
 
         [HttpGet]
@@ -31,7 +34,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
         [HttpGet("{name}")]
         public IActionResult GetBoss(string name)
         {
-            var boss = ctx.Bosses.FirstOrDefault(t => t.BossName == name);
+            var boss = ctx.Bosses.FirstOrDefault(t => t.Id == name);
             if (boss == null)
             {
                 return NotFound(); // Return 404 if boss not found
@@ -42,16 +45,18 @@ namespace Kliens_RAPC9Y_Backend.Controllers
 
         [Authorize]
         [HttpPost]
-        public void AddBoss([FromBody] Boss b)
+        public async void AddBoss([FromBody] Boss b)
         {
             b.Id = Guid.NewGuid().ToString();
             ctx.Bosses.Add(b);
             ctx.SaveChanges();
+            await _hubContext.Clients.All.SendAsync("AddBoss", b);
+
         }
 
         [Authorize]
         [HttpPut]
-        public void EditBoss([FromBody] Boss b)
+        public async void EditBoss([FromBody] Boss b)
         {
             var old = ctx.Bosses.FirstOrDefault(t=>t.Id == b.Id);
             old.Game_Id = b.Game_Id;
@@ -67,18 +72,18 @@ namespace Kliens_RAPC9Y_Backend.Controllers
 
         [Authorize]
         [HttpDelete("{name}")]
-        public void DeleteBoss(string name)
+        public async void DeleteBoss(string name)
         {
-            var old = ctx.Bosses.FirstOrDefault(t => t.BossName == name);
+            var old = ctx.Bosses.FirstOrDefault(t => t.Id == name);
             ctx.Bosses.Remove(old);
             ctx.SaveChanges();
+            await _hubContext.Clients.All.SendAsync("DeleteBoss", name);
         }
 
-        [Authorize]
-        [HttpPost("defeat/{bossName}")]
-        public IActionResult DefeatBoss(string bossName)
+        [HttpPost("{username}/{bossName}")]
+        public async Task<IActionResult> DefeatBoss(string username, string bossName)
         {
-            var user = _userManager.Users.FirstOrDefault(t => t.UserName == this.User.Identity.Name);
+            var user = _userManager.Users.FirstOrDefault(t => t.UserName == username);
             var boss = ctx.Bosses.FirstOrDefault(b => b.BossName == bossName);
 
             if (user == null || boss == null)
@@ -88,6 +93,7 @@ namespace Kliens_RAPC9Y_Backend.Controllers
 
             user.DefeatedBosses += boss.BossName + ";";
             ctx.SaveChanges();
+            await _hubContext.Clients.All.SendAsync("AddDefeatedBoss", user.DefeatedBosses);
 
             return Ok();
         }

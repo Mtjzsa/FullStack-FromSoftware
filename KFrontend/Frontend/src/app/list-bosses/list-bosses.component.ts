@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Boss } from '../_models/boss';
 import { Game } from '../_models/game';
+import { SingalrserviceComponent } from '../singalrservice/singalrservice.component';
+import { getUserAgentHeader } from '@microsoft/signalr/dist/esm/Utils';
 
 @Component({
   selector: 'app-list-bosses',
@@ -14,7 +16,7 @@ export class ListBossesComponent {
   games: Array<Game>
   searchTerm: string = '';
   
-  constructor(http: HttpClient) {
+  constructor(http: HttpClient, private SignalRService : SingalrserviceComponent) {
     this.http = http,
     this.bosses = [],
     this.games = []
@@ -50,8 +52,26 @@ export class ListBossesComponent {
         this.games.push(s)
       })
     })
-  }
+    
+    //singalr
+    this.SignalRService.addBoss$.subscribe((boss)=>{
+      if (boss){
+        this.bosses.push(boss)
+      }
+    })
 
+    //delete boss
+    this.SignalRService.deleteBoss$.subscribe((todelete)=>{
+      if (todelete){
+        for (let i = this.bosses.length - 1; i >= 0; i--) {
+          if (todelete === (this.bosses[i].id)) {
+            this.bosses.splice(i, 1);
+          }
+        }
+      }
+    })
+
+  }
 
   public getGame(boss : Boss, games : Array<Game>) : string {
     const game = games.find(game => game.id === boss.game_Id);

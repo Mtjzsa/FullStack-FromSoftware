@@ -44,6 +44,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { SingalrserviceComponent } from './singalrservice/singalrservice.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     UpdateDeleteGameComponent,
     ProfileComponent,
     ProgressComponent,
-    StatsComponent
+    StatsComponent,
+    SingalrserviceComponent
   ],
   imports: [
     BrowserModule,
