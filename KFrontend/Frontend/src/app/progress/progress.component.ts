@@ -125,6 +125,8 @@ export class ProgressComponent {
         (success) => {
           this.snackbar.open('Boss succesfully added to your list!', 'Close', { duration: 5000 })
           //this.router.navigate(['/progress'])
+          this.appUser.defeatedBosses += `;${bossName}`
+          this.selectedBoss = "";
 
         },
         (error) => {
