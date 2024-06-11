@@ -14,6 +14,7 @@ import { CreateGameComponent } from './create-game/create-game.component';
 import { UpdateDeleteGameComponent } from './update-delete-game/update-delete-game.component';
 import { UpdateDeleteBossComponent } from './update-delete-boss/update-delete-boss.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ProgressComponent } from './progress/progress.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path: "create-game", component: CreateGameComponent, canActivate: [ApiService]},
 
   {path: "profile", component: ProfileComponent, canActivate: [ApiService]},
+  {path: "progress", component: ProgressComponent, canActivate: [ApiService]},
 
   { path: '**',  redirectTo: 'home', pathMatch: 'full'}
 ];

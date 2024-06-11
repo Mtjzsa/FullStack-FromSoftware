@@ -13,7 +13,13 @@
       <button mat-menu-item routerLink="/create-game" *ngIf="this.api.isLoggedIn()">Create Game</button>
     </mat-menu>
     
-    
+    <a  routerLink="/statistics">
+      Statistics
+    </a>
+
+    <a  routerLink="/progress" *ngIf="this.api.isLoggedIn()">
+      Progress
+    </a>
   </div>
 
   <div>
